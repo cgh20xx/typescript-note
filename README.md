@@ -1,4 +1,8 @@
-# webpack5 TypeScript template
+# TypeScript 學習筆記
+
+所 typescript 範例都放在 `/src/ex/` 資料夾下，若要在瀏覽器檢查 console，可修改 `/src/index.ts` 中要 import 的 ts 範例。
+
+> 以下為 webpack 5 建構 typescript 流程(可忽略)
 
 ## 安裝 webpack 5
 ```
@@ -307,58 +311,4 @@ index.css 修改先前導入的資源路徑
 - background-image: url('../images/ball_1.png');
 + background-image: url('@/images/ball_1.png');
 }
-```
-
-## 安裝及設定圖片壓縮套件 image-minimizer-webpack-plugin 
-
-建議圖片壓縮套件只用在 production 環境(注意：此套件中文文件有很多錯誤不要看，看英文版就好)
-
-文件：https://webpack.js.org/plugins/image-minimizer-webpack-plugin/
-
-
-image-minimizer-webpack-plugin 需搭配 imagemin 這個圖片壓縮套件下載使用
-```
-npm install image-minimizer-webpack-plugin imagemin --save-dev
-```
-
-imagemin 套件又有支援各種圖片格式，假設我要壓縮 gif、jpeg、png 則需再下載相關套件。(以下套件為 lossy 有損壓縮，若要 lossless 無損壓縮請參考官網另外下載)
-
-```
-npm install imagemin-gifsicle imagemin-mozjpeg imagemin-pngquant --save-dev
-```
-
-webpack.config.js
-```js
-module.exports = {
-  ...
-  module: {
-    rules: [
-      ...
-      {
-        test: /\.(jpe?g|png|gif)$/i,
-        type: 'asset', // 還有其它三種 type
-      },
-    ],
-  },
-  optimization: {
-    minimizer: [
-      new ImageMinimizerPlugin({
-        minimizer: {
-          implementation: ImageMinimizerPlugin.imageminMinify,
-          options: {
-            plugins: [
-              ['gifsicle'],
-              ['mozjpeg', { quality: 90 }],
-              // https://www.npmjs.com/package/imagemin-mozjpeg
-              ['pngquant', { speed: 4 }],
-              // https://www.npmjs.com/package/imagemin-pngquant
-            ],
-          },
-        },
-        // Disable `loader` 禁用 loader 之後，預設 8KB 以上的檔案才會進來被 ImageMinimizerPlugin 處理
-        loader: false,
-      }),
-    ],
-  },
-};
 ```
