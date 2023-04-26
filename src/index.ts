@@ -1,1 +1,1 @@
-import './test'
+import './ex/01-type-basic'

@@ -1,5 +1,5 @@
 {
-  "name": "webpack5",
+  "name": "typescript-001",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,22 +9,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cgh20xx/webpack5.git"
+    "url": "git+https://github.com/cgh20xx/typescript-001.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/cgh20xx/webpack5/issues"
+    "url": "https://github.com/cgh20xx/typescript-001/issues"
   },
-  "homepage": "https://github.com/cgh20xx/webpack5#readme",
+  "homepage": "https://github.com/cgh20xx/typescript-001#readme",
   "devDependencies": {
     "css-loader": "^6.7.1",
     "html-webpack-plugin": "^5.5.0",
-    "image-minimizer-webpack-plugin": "^3.3.1",
-    "imagemin": "^8.0.1",
-    "imagemin-gifsicle": "^7.0.0",
-    "imagemin-mozjpeg": "^10.0.0",
-    "imagemin-pngquant": "^9.0.2",
     "mini-css-extract-plugin": "^2.6.1",
     "style-loader": "^3.3.1",
     "ts-loader": "^9.4.2",
