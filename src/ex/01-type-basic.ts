@@ -12,13 +12,15 @@ let boo2 = false // 自動推導型別為 boolean
 let syb1: symbol = Symbol(1)
 let syb2 = Symbol(1) // 自動推導型別為 symbol
 
-// 注意：若已指定型別但又手動給值為 null 或 undefined 是給過的，如下：
-let num3: number = null
-let str3: string = null
-let boo3: boolean = null
-let syb3: symbol = null
+// 注意：在 tsconfig.json strictNullChecks = false (預設為 false)的情況，
+// 若已指定型別但又手動給值為 null 或 undefined 是給過的，如下：
+// let num3: number = null
+// let str3: string = null
+// let boo3: boolean = null
+// let syb3: symbol = null
 
-// 注意：以下若手動指定 undefined 或 null 系統會自動推斷 type 為 any
+// 注意：在 tsconfig.json strictNullChecks = false (預設為 false)的情況，
+// 若手動指定 undefined 或 null 系統會自動推斷 type 為 any
 let un1 = undefined // 注意: un1 type 為 any
 let un2: undefined  // type 為 undefined
 let nu1 = null // 注意: nu1 type 為 any

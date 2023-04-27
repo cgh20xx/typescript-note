@@ -9,9 +9,6 @@
 // 單一元素陣列
 const arr1: number[] = [1, 2, 3];
 // arr1.push('1'); // 推入字串會報錯
-// arr1.push(null) // 推入 null 不會報錯
-// arr1.push(undefined) // 推入 null 不會報錯
-// console.log(arr1);
 
 const arr2 = [1, 2, 3]; // 自動推導為 number[]
  
