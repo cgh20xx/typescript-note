@@ -3,6 +3,8 @@
  * 但 null 及 undefined 會自動推導為 any
  */
 
+// Type Annotation (型別註記)
+// 在變數後使用：即可
 let num1: number = 100
 let num2 = 100 // 自動推導型別為 number
 let str1: string = 'hank'
