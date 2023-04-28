@@ -29,3 +29,20 @@ async function getData() {
 getData()
 
 // any 與 unknown
+// 若使用 any 則可能沒辦法在編譯時期檢查到錯誤
+const flag = false
+function getFullName() {
+  let myName: unknown // 使用 unknown 會比較嚴格
+  if (flag) {
+    myName = 'hank hsiao'
+  } else {
+    myName = null
+  }
+  return myName;
+}
+const fullName = getFullName();
+// 因回傳的 fullName 是 unknown，若未使用 typof 判斷型別，使用 fullName 會報錯。
+if (typeof fullName === 'string') {
+  fullName.split('')
+}
+
