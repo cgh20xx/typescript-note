@@ -16,7 +16,13 @@ let name3 = name2 as string
 // 斷言 as 的應用
 async function getData() {
   const res = await fetch('https://jsonplaceholder.typicode.com/todos/1')
-  const data = await res.json() // ts 會將 data 設定為 any 
+  // 使用 as 關鍵字強制給 data 添加物件型別
+  const data = await res.json() as { 
+    userId: number,
+    id: number,
+    title: string,
+    completed: boolean
+  }
   console.log(data)
 }
 
