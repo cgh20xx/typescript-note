@@ -2,4 +2,5 @@
 // import './ex/02-type-array-tuple'
 // import './ex/03-type-object'
 // import './ex/04-type-any-unknown'
-import './ex/05-type-union-never'
+// import './ex/05-type-union-never'
+import './ex/06-type-define'
