@@ -4,4 +4,5 @@
 // import './ex/04-type-any-unknown'
 // import './ex/05-type-union-never'
 // import './ex/06-type-define'
-import './ex/07-interface-define'
+// import './ex/07-interface-define'
+import './ex/08-interface-vs-type'
