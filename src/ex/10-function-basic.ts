@@ -29,7 +29,40 @@ function getNumber() {
   return 123
 }
 
-// return void 沒有回傳值  
+// void: 沒有手動 return 任何值，或是沒有寫 return，預設就是 void
+// 在 js 中沒有 return 任何值，將隱式返回 undefined，然而在 TS 中 void 和 undefined 是不同的。  
 function doSomething(): void {
   console.log('no return')
+  // return undefined
+  return;
 }
+
+// never: Some functions never return a value:
+function doSomething2(): never {
+  throw new Error('xxx error')
+}
+
+// 使用建構函式建立物件 (感覺問題很多，用 class 建立物件較好)
+type PersonObj = {
+  name: string,
+  age: number
+}
+
+type PersonObjConstructor = {
+  new(name: string): PersonObj
+}
+
+function createPerson(Person: PersonObjConstructor) {
+  let person1 = new Person('hank');
+}
+
+// 使用 class 建立物件
+class Person2 {
+  name: string;
+
+  constructor(name: string) {
+    this.name = name;
+  }
+}
+
+let person2 = new Person2('hank');
