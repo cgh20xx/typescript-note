@@ -66,3 +66,21 @@ class Person2 {
 }
 
 let person2 = new Person2('hank');
+
+
+
+
+
+// return [] 注意避免 union 情況發生
+function getArr() {
+  // 這樣寫預設會自動推導為 function getArr(): (string | number)[]
+  // 導致解構後的變數都變成 string 或 number 都可以
+  // return [0, 1, 'hank']
+  // 改使用 assertion 為 tuple 的方式即可
+  return [0, 1, 'hank'] as [number, number, string]
+}
+// 現在 id age 都是 number 且 userName 為 string，都正確了。
+const [id, age, userName ] = getArr();
+
+
+
