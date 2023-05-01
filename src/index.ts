@@ -7,4 +7,5 @@
 // import './ex/07-interface-define'
 // import './ex/08-interface-vs-type'
 // import './ex/09-enum'
-import './ex/10-function-basic'
+// import './ex/10-function-basic'
+import './ex/11-function-generics'
