@@ -1,9 +1,10 @@
 /**
  * interface: 介面
+ * TypeScript 使用介面（Interfaces）來定義物件的型別。
  */
 
 interface People {
-  name: string,
+  name: string
   age: number
 }
 
