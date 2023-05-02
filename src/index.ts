@@ -11,4 +11,5 @@
 // import './ex/11-function-generics'
 // import './ex/12-function-overloads'
 // import './ex/13-function-rest'
-import './ex/14-class-basic'
+// import './ex/14-class-basic'
+import './ex/15-class-interface'
