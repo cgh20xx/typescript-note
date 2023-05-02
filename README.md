@@ -2,6 +2,7 @@
 
 所 typescript 範例都放在 `/src/ex/` 資料夾下，若要在瀏覽器檢查 console，可修改 `/src/index.ts` 中要 import 的 ts 範例。
 
+Node.js v16
 <br />
 <br />
 <br />
