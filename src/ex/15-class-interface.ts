@@ -36,7 +36,7 @@ class Animal implements IAnimal {
   }
   // 實作 walk 方法
   walk(speed?: number) {
-    speed && (this.speed = speed)
+    typeof speed === 'number' && (this.speed = speed)
     console.log(`${this.name} walking speed = ${ speed }`);
   }
   // 實作 makeSound 方法
