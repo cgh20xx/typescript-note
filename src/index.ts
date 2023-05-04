@@ -14,4 +14,5 @@
 // import './ex/14-class-basic'
 // import './ex/15-class-interface'
 // import './ex/16-class-extends'
-import './ex/17-class-private-protected'
+// import './ex/17-class-private-protected'
+import './ex/18-class-static'

@@ -50,3 +50,5 @@ const user3 = new User2({
   addr: '全家就是我家'
 });
 console.log('user3:', user3);
+
+export {}

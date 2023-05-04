@@ -12,3 +12,5 @@ const people4: People = {
   name: 'hank',
   age: 10
 }
+
+export {}

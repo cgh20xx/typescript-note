@@ -24,3 +24,5 @@ enum Key {
   Left = 5, // 手動編號 5
   Right,// 自動編號從 6 開始
 }
+
+export {}

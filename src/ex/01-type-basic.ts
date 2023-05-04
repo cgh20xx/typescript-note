@@ -27,3 +27,5 @@ let un1 = undefined // 注意: un1 type 為 any
 let un2: undefined  // type 為 undefined
 let nu1 = null // 注意: nu1 type 為 any
 let nu2: null  // type 為 null
+
+export {} // 新增 export {} 到所有檔案，使 ts 能將每個檔案視為獨立的模組，避免變數名稱衝突。

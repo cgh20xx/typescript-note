@@ -77,3 +77,5 @@ class Dog4 extends Animal4 {
 
 const d4 = new Dog4('juby4');
 d4.walk();
+
+export {}

@@ -41,3 +41,5 @@ class PrivateInfo {
 
 const privateInfo = new PrivateInfo();
 console.log('privateInfo:', privateInfo);
+
+export {}

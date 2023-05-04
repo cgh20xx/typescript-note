@@ -29,3 +29,4 @@ let people3 = {} as Person
 people3.name = 'tom'
 people3.age = 20
 
+export {}

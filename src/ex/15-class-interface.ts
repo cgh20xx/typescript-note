@@ -53,3 +53,5 @@ const animal = new Animal('id1', 'juby', 10, 20)
 console.log('animal:',animal);
 animal.walk(2)
 console.log('makeSound:', animal.makeSound());
+
+export {}

@@ -27,3 +27,5 @@ let text2 = 123
 // let text3 = text2 as unknown as string
 let text3 = text2.toString()
 text3 = 'abc'
+
+export {}

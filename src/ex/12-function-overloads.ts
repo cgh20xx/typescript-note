@@ -43,3 +43,5 @@ reverse('hank')
 // declare function fn(x: unknown): unknown;
 // var myElem: HTMLDivElement;
 // var x = fn(myElem); // x: string, :)
+
+export {}

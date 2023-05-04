@@ -44,3 +44,5 @@ let dog3: Animal3 = {
   name: 'juby',
   age: 3,
 }
+
+export {}

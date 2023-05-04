@@ -26,3 +26,6 @@ const nums2 = [1, 2, 3] as const;
 
 // const nums2 = [1, 2, 3] as [number, number, number];
 calculate2(...nums2);
+
+
+export {}

@@ -82,5 +82,4 @@ function getArr() {
 // 現在 id age 都是 number 且 userName 為 string，都正確了。
 const [id, age, userName ] = getArr();
 
-
-
+export {}

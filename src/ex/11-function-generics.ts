@@ -31,3 +31,4 @@ print<string>('hank')
 print<number>(123)
 print<boolean>(true)
 
+export {}

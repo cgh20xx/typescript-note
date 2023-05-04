@@ -46,3 +46,4 @@ if (typeof fullName === 'string') {
   fullName.split('')
 }
 
+export {}

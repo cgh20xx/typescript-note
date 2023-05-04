@@ -29,3 +29,5 @@ const arr8: ((number)[]| string)[] = [[1], [2, 2], '3'];
 const tu1: [number, string, boolean] = [123, '456', true];
 // Tuple 元組的陣列包陣列
 const tu2: [number, number][] = [[1, 2], [3, 4]];
+
+export {}
