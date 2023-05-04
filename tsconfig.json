@@ -15,5 +15,11 @@
     // 相容性處理 (針對 CommonJS)
     "esModuleInterop": true, // 讓 ts 有能力 import CommonJS 模組
     "allowSyntheticDefaultImports": true, // 通常配合讓 esModuleInterop: true 使用，讓 import CommonJS 不需使用 as 別名也能用
+
+    // 路徑處理
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["*"]
+    }
   }
 }
