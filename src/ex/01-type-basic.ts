@@ -7,12 +7,16 @@
 // 在變數後使用：即可
 let num1: number = 100
 let num2 = 100 // 自動推導型別為 number
+const num3 = 100 // 自動推導型別為 100
 let str1: string = 'hank'
 let str2 = 'hank' // 自動推導型別為 string
+const str3 = 'hank' // 自動推導型別為 "hank"
 let boo1: boolean = false
 let boo2 = false // 自動推導型別為 boolean
+const boo3 = false // 自動推導型別為 false
 let syb1: symbol = Symbol(1)
 let syb2 = Symbol(1) // 自動推導型別為 symbol
+const syb3 = Symbol(1) // 自動推導型別為 typeof syb3
 
 // 注意：在 tsconfig.json strictNullChecks = false (預設為 false)的情況，
 // 若已指定型別但又手動給值為 null 或 undefined 是給過的，如下：
