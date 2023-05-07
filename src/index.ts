@@ -17,4 +17,5 @@
 // import './ex/17-class-private-protected'
 // import './ex/18-class-static'
 // import '@/ex/18-class-static'
-import '@/ex/19-generics-interface'
+// import '@/ex/19-generics-interface'
+import '@/ex/20-generics-extends'
