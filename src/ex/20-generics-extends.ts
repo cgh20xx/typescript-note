@@ -15,7 +15,7 @@ class ClassA {}
 class ClassB extends ClassA {}
 
 // ========== 在修件判斷上的 extends ==========
-// 判斷 child 是否 extends fahter?
+// 判斷 child 是否 extends father?
 // 好像只能用在 type XX = 後面，並要使用三元運算子，不能在一般的程式中用，如下一行：
 // console.log(B extends A ? string : number); // error
 type T1 =  B extends A ? string : number // type T1 = string
@@ -46,7 +46,7 @@ type R2 = TT3<'hank1' | 'hank2'> // type R2 = string | number
 // 若要將上面的 TT3 的泛型符合原本期待像 TT2 泛型，
 // 可以在 TT4 裡使用 []，將整個 'hank1' | 'hank2' 拿來比較，而非一一比較。
 type TT4<T> = [T] extends ['hank1'] ? string : number
-type R3 = TT4<'hank1' | 'hank2'> // type R2 = string | number
+type R3 = TT4<'hank1' | 'hank2'> // type R3 = number
 
 // ========== never 是所有類型的子類別 ==========
 type N1 = never extends 'hank' ? string : number // type N1 = string
