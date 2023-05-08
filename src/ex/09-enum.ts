@@ -25,4 +25,35 @@ enum Key {
   Right,// 自動編號從 6 開始
 }
 
+// =============================
+enum STRING_GENDER {
+  MALE = 'male',
+  FEMALE = 'female',
+}
+
+type T1 = STRING_GENDER extends string ? true : false; // true
+type T2 = string extends STRING_GENDER ? true : false; // false
+type T3 = string extends STRING_GENDER.MALE ? true : false; // false
+type T4 = 'male' extends STRING_GENDER ? true : false; // false
+type T5 = 'male' extends STRING_GENDER.MALE ? true : false; // false
+type T6 = STRING_GENDER.MALE extends STRING_GENDER ? true : false; // true
+type T7 = STRING_GENDER.MALE extends string ? true : false; // true
+type T8 = STRING_GENDER extends STRING_GENDER.MALE ? true : false; // false
+
+
+enum NUMERIC_GENDER {
+  MALE,
+  FEMALE,
+}
+
+type T11 = NUMERIC_GENDER extends number ? true : false; // true
+type T12 = number extends NUMERIC_GENDER ? true : false; // true
+type T13 = number extends NUMERIC_GENDER.MALE ? true : false; // true
+type T14 = 10 extends NUMERIC_GENDER ? true : false; // true
+type T15 = 10 extends NUMERIC_GENDER.MALE ? true : false; // true
+type T16 = NUMERIC_GENDER.MALE extends NUMERIC_GENDER ? true : false; // true
+type T17 = NUMERIC_GENDER.MALE extends number ? true : false; // true
+type T18 = NUMERIC_GENDER extends NUMERIC_GENDER.MALE ? true : false; // false
+type T19 = NUMERIC_GENDER.MALE extends NUMERIC_GENDER.FEMALE ? true : false; // false
+
 export {}

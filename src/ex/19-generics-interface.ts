@@ -37,3 +37,5 @@ class Person<T> implements IPerson<T> {
 // const person = new Person('hank'); // 沒手動寫泛型會根據參數自動推導為該參數的型別，無法檢查參數型別是否正確。
 const person = new Person<string>('hank'); // 有手動寫泛型就可檢查到第一個參數是否符合泛型型別
 console.log('person:', person);
+
+export {}

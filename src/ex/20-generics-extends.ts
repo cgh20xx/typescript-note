@@ -54,3 +54,5 @@ type N1 = never extends 'hank' ? string : number // type N1 = string
 type N2<T> = T extends 'hank' ? string : number
 // never 放入泛型只會是 never
 type R4 = N2<never> // 注意：type R3 = never
+
+export {}
