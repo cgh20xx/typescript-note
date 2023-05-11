@@ -89,7 +89,7 @@ interface NumberArray {
 let fibonacci: NumberArray = [1, 1, 2, 3, 5];
 // NumberArray 表示：只要索引的型別是數字時，那麼值的型別必須是數字。
 // 雖然介面也可以用來描述陣列，但是我們一般不會這麼做，因為這種方式比前兩種方式複雜多了。
-// 不過有一種情況例外，那就是它常用來表示類別陣列。
+// 不過有一種情況例外，那就是它常用來表示類陣列（Array-like Object)。
 
 
 
