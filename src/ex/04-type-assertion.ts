@@ -22,6 +22,7 @@ let name3 = name2 as string
 
 // 上例中，存取 something.length 的時候會報錯。
 // 此時可以使用型別斷言，將 something 斷言成 string：
+// 型別斷言不是型別轉換，斷言成一個聯合型別中不存在的型別是不允許的：
 function getLength(something: string | number): number {
   // 第一種寫法
   if ((<string>something).length) {
