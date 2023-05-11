@@ -11,7 +11,8 @@ function add(a: number, b: string) {
 
 let resault = add(1, '2') // 自動推導為 string
 
-// 可選的參數 ? (需從最後一個參數開始用)
+// 可選的參數 ?:
+// 需要注意的是，可選參數必須接在必需參數後面。換句話說，可選參數後面不允許再出現必需參數了：
 function setUser(name: string, age?: number) {
   // 若 age 為可選，直接使用會報錯，需先判斷 type 或是否存在
 
