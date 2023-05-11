@@ -1,5 +1,8 @@
 // ========== function ========== 
 
+// 在 JavaScript 中，有兩種常見的定義函式的方式——函式宣告（Function Declaration）和函式表示式（Function Expression）：
+
+// ===== 函式宣告 =====
 
 // parameter
 function add(a: number, b: string) {
@@ -42,7 +45,27 @@ function doSomething2(): never {
   throw new Error('xxx error')
 }
 
-// 使用建構函式建立物件 (感覺問題很多，用 class 建立物件較好)
+
+// ===== 函式表示式 =====
+
+// 如果要我們現在寫一個對函式表示式（Function Expression）的定義，可能會寫成這樣：
+let mySum1 = function (x: number, y: number): number {
+  return x + y;
+};
+// 這是可以透過編譯的，不過事實上，上面的程式碼只對等號右側的匿名函式進行了型別定義，
+// 而等號左邊的 mySum，是透過賦值操作進行型別推論而推斷出來的。
+// 如果需要我們手動給 mySum 新增型別，則應該是這樣：
+let mySum2: (x: number, y: number) => number = function (x: number, y: number): number {
+  return x + y;
+};
+// ** 注意 **  不要混淆了 TypeScript 中的 => 和 ES6 中的 =>。
+// 在 TypeScript 的型別定義中，=> 用來表示函式的定義，左邊是輸入型別，需要用括號括起來，右邊是輸出型別。
+
+
+
+// ===== 使用建構函式建立物件 =====
+
+// (感覺問題很多，用 class 建立物件較好)
 type PersonObj = {
   name: string,
   age: number
