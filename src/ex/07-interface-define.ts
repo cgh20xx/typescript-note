@@ -92,5 +92,15 @@ let fibonacci: NumberArray = [1, 1, 2, 3, 5];
 // 不過有一種情況例外，那就是它常用來表示類陣列（Array-like Object)。
 
 
+// =========== 用介面定義函式的形狀 ===========
+// 我們也可以使用介面的方式來定義一個函式需要符合的形狀：
+interface SearchFunc {
+  (source: string, subString: string): boolean;
+}
+
+let mySearch: SearchFunc;
+mySearch = function(source: string, subString: string) {
+  return source.search(subString) !== -1;
+}
 
 export {}
