@@ -30,4 +30,12 @@ const tu1: [number, string, boolean] = [123, '456', true];
 // Tuple 元組的陣列包陣列
 const tu2: [number, number][] = [[1, 2], [3, 4]];
 
+// ======== 越界的元素 ========
+// 當新增越界的元素時，它的型別會被限制為元組中每個型別的聯合型別：
+let tom: [string, number];
+tom = ['Tom', 25];
+tom.push('male');
+// tom.push(true); // Argument of type 'true' is not assignable to parameter of type 'string | number'.
+console.log('tom:', tom);
+
 export {}
