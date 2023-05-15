@@ -1,5 +1,6 @@
-// ========== enum ========== 
+// ========== enum 自動賦值 ========== 
 // ts 幫我們定義枚舉值不用去想數字，會們動產生不重覆的流水號。
+// 列舉成員會被賦值為從 0 開始遞增的數字，同時也會對列舉值到列舉名進行反向對映
 // 官方文件: https://www.typescriptlang.org/docs/handbook/enums.html
 enum Direction {
   Up,
@@ -18,6 +19,10 @@ enum Direction {
 //     Direction[Direction["Right"] = 3] = "Right";
 // })(Direction || (Direction = {}));
 
+
+// ========== enum 手動賦值 ==========
+// 注意：如果未手動賦值的列舉項與手動賦值的重複了，TypeScript 是不會察覺到，
+// 所以手動賦值要注意不要跟自動賦值產生的流水號重覆了
 enum Key {
   Up = 1, // 手動編號 1
   Down, // 自動編號從 2 開始
