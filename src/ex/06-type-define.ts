@@ -1,12 +1,17 @@
 /**
- * type: 自定義類型，可以共用。
+ * type: 型別別名
+ * 用來給一個型別起個新名字。
+ * type 常用於聯合型別。
  */
 
 // 基本型別
-type CustomType = string | number
+type CustomType = string
 
-let str3: CustomType = '123'
-let num3: CustomType = 123
+// 基本型別以聯合型別為例
+type TwoType = string | number
+
+let str3: TwoType = '123'
+let num3: TwoType = 123
 
 // 物件型別
 type Person = {
