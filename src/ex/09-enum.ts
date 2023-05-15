@@ -61,4 +61,19 @@ type T17 = NUMERIC_GENDER.MALE extends number ? true : false; // true
 type T18 = NUMERIC_GENDER extends NUMERIC_GENDER.MALE ? true : false; // false
 type T19 = NUMERIC_GENDER.MALE extends NUMERIC_GENDER.FEMALE ? true : false; // false
 
+
+// ========= 常數列舉 =========
+// 常數列舉是使用 const enum 定義的列舉型別：
+const enum Directions {
+  Up,
+  Down,
+  Left,
+  Right
+}
+
+let directions = [Directions.Up, Directions.Down, Directions.Left, Directions.Right];
+// 常數列舉與普通列舉的區別是，它會在編譯階段被刪除，並且不能包含計算成員。
+// 上例的編譯結果是
+// var directions = [0 /* Up */, 1 /* Down */, 2 /* Left */, 3 /* Right */];
+
 export {}
