@@ -29,3 +29,17 @@
 // declare enum 宣告全域列舉型別
 // declare namespace 宣告全域變數(含有子屬性的)
 // interface 和 type 宣告全域型別
+
+// ****** 注意 ******
+// 宣告語句中只能定義型別，切勿在宣告語句中定義具體的實現
+
+// ****** 注意 ******  
+// 不要混淆了 TypeScript 中的 => 和 ES6 中的 =>
+// 在 TypeScript 的型別定義中，=> 用來表示函式的定義，左邊是輸入型別，需要用括號括起來，右邊是輸出型別。
+
+// declare function 用來定義全域函式的型別。jQuery 其實就是一個函式，所以也可以用 function 來定義
+// src/jQuery.d.ts
+// declare function jQuery(selector: string): any;
+
+// ****** 注意 ****** 
+// declare class 語句也只能用來定義型別，不能用來定義具體的實現
