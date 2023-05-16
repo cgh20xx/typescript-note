@@ -42,4 +42,23 @@ class PrivateInfo {
 const privateInfo = new PrivateInfo();
 console.log('privateInfo:', privateInfo);
 
+
+// 當建構函式修飾為 private 時，該類別不允許被繼承或者實例化：
+// 當建構函式修飾為 protected 時，該類別只允許被繼承：
+class Animal {
+  public name;
+  private constructor (name: string) {
+      this.name = name;
+}
+}
+// class Cat extends Animal {
+//   constructor (name: string) {
+//       super(name);
+//   }
+// }
+
+// let a = new Animal('Jack');
+// 出現以下錯誤
+// index.ts(7,19): TS2675: Cannot extend a class 'Animal'. Class constructor is marked as private.
+// index.ts(13,9): TS2673: Constructor of class 'Animal' is private and only accessible within the class declaration.
 export {}
