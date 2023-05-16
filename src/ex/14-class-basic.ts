@@ -5,7 +5,7 @@ class User {
   // 在 ts 一定要先定義 Public class fields 的 type 才能在 constructor 或 method 中使用，但在 js 中可以不定義。 
   name: string
   age: number
-  addr: string = '沒有地址'
+  addr: string = '沒有地址' // 除了宣告實例屬性的 type，也可直接定義實例屬性的值
 
   constructor(name: string, age: number, addr?: string) {
     this.name = name
