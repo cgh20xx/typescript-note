@@ -34,4 +34,27 @@ console.log(Bank.getBalence())
 // Bank.setBalence(999);
 // console.log(Bank.getBalence());
 
+
+
+// ========= readonly ==========
+// 只讀屬性關鍵字，只允許出現在屬性宣告或索引簽名中。
+class Animal {
+  readonly name;
+  public constructor(name: string) {
+      this.name = name;
+  }
+}
+
+let a = new Animal('Jack');
+console.log(a.name); // Jack
+// a.name = 'Tom';
+// index.ts(10,3): TS2540: Cannot assign to 'name' because it is a read-only property.
+
+// 注意如果 readonly 和其他訪問修飾符同時存在的話，需要寫在其後面。
+class Animal2 {
+  public readonly name;
+  public constructor(name: string) {
+      this.name = name;
+  }
+}
 export {}
