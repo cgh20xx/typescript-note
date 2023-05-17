@@ -30,4 +30,21 @@ console.log(createArray2<string>(3, 'x')); // ['x', 'x', 'x']
 // function createArray2<number>(length: number, value: number): number[]
 console.log(createArray2(2, 0)); // [0, 0]
 
+
+// ========= 泛型引數的預設型別 =========
+// 在 TypeScript 2.3 以後，我們可以為泛型中的型別引數指定預設型別。
+// 當使用泛型時沒有在程式碼中直接指定型別引數，從實際值引數中也無法推測出時，這個預設型別就會起作用。
+
+// 使用泛型來改寫
+function createArray3<T = string>(length: number, value: T): T[] {
+  let result: T[] = [];
+  for (let i = 0; i < length; i++) {
+      result[i] = value;
+  }
+  return result;
+}
+
+
+
+
 export {}
