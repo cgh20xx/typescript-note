@@ -29,3 +29,5 @@ console.log(createArray2<string>(3, 'x')); // ['x', 'x', 'x']
 // 若不指定傳入的泛型，則會自動推導。推導如下：
 // function createArray2<number>(length: number, value: number): number[]
 console.log(createArray2(2, 0)); // [0, 0]
+
+export {}
