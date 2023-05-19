@@ -24,5 +24,5 @@
 // import '@/ex/20-generics-extends'
 // import '@/ex/21-generics-extends-infer'
 // import '@/ex/22-generics-keyof'
-import '@/ex/25-utility-types'
+import '@/ex/40-utility-types-partial'
 // import '@/ex/30-declaration-files'
