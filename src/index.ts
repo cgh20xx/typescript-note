@@ -27,4 +27,5 @@
 // import '@/ex/30-declaration-files'
 // import '@/ex/40-utility-types-partial'
 // import '@/ex/41-utility-types-required'
-import '@/ex/42-utility-types-readonly'
+// import '@/ex/42-utility-types-readonly'
+import '@/ex/43-utility-types-record'
