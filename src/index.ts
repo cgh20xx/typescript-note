@@ -30,4 +30,5 @@
 // import '@/ex/42-utility-types-readonly'
 // import '@/ex/43-utility-types-record'
 // import '@/ex/44-utility-types-pick'
-import '@/ex/45-utility-types-omit'
+// import '@/ex/45-utility-types-omit'
+import '@/ex/46-utility-types-exclude'
