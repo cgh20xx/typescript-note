@@ -29,4 +29,5 @@
 // import '@/ex/41-utility-types-required'
 // import '@/ex/42-utility-types-readonly'
 // import '@/ex/43-utility-types-record'
-import '@/ex/44-utility-types-pick'
+// import '@/ex/44-utility-types-pick'
+import '@/ex/45-utility-types-omit'

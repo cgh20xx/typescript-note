@@ -1,4 +1,4 @@
-// Pick<Type, Keys>：從型別 Type 中挑選指定的屬性 Keys (可多選)。
+// Pick<Type, Keys>：從型別 Type 中挑選指定的屬性 Keys (可以是 Union Types)。
 
 interface Todo {
   title: string;
