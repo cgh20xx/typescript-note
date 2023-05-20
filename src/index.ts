@@ -18,6 +18,7 @@
 // import './ex/17-class-private-protected'
 // import './ex/18-class-static'
 // import '@/ex/18-class-static'
+import '@/ex/19-generics-class'
 // import '@/ex/19-generics-function'
 // import '@/ex/19-generics-interface'
 // import '@/ex/20-generics-constraints'
@@ -34,4 +35,4 @@
 // import '@/ex/46-utility-types-exclude'
 // import '@/ex/47-utility-types-extract'
 // import '@/ex/48-utility-types-nonnullable'
-import '@/ex/49-utility-types-returntype'
+// import '@/ex/49-utility-types-returntype'
