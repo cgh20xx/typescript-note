@@ -2,16 +2,62 @@
 
 所有 typescript 範例都放在 `/src/ex/` 資料夾下，若要在瀏覽器檢查 console，可修改 `/src/index.ts` 中要 import 的 ts 範例。
 
-Node.js v16
-<br />
-<br />
-<br />
-<br />
-<br />
+Node.js 版本 v16
 
----
+## 專案結構
+```
+.
+├── src
+│   ├── css
+│   │   └── index.css
+│   ├── ex
+│   │   ├── 01-type-basic.ts
+│   │   ├── 02-type-array-tuple.ts
+│   │   ├── 03-type-object.ts
+│   │   ├── 04-type-any-unknown.ts
+│   │   ├── 04-type-assertion.ts
+│   │   ├── 05-type-union-never.ts
+│   │   ├── 06-type-define.ts
+│   │   ├── 07-interface-define.ts
+│   │   ├── 08-interface-vs-type.ts
+│   │   ├── 09-enum.ts
+│   │   ├── 10-function-basic.ts
+│   │   ├── 11-function-generics.ts
+│   │   ├── 12-function-overloads.ts
+│   │   ├── 13-function-rest.ts
+│   │   ├── 14-class-basic.ts
+│   │   ├── 15-class-interface.ts
+│   │   ├── 16-class-extends.ts
+│   │   ├── 17-class-private-protected.ts
+│   │   ├── 18-class-static.ts
+│   │   ├── 19-generics-class.ts
+│   │   ├── 19-generics-function.ts
+│   │   ├── 19-generics-interface.ts
+│   │   ├── 20-generics-constraints.ts
+│   │   ├── 20-generics-extends.ts
+│   │   ├── 21-generics-extends-infer.ts
+│   │   ├── 22-generics-keyof.ts
+│   │   ├── 30-declaration-files.ts
+│   │   ├── 40-utility-types-partial.ts
+│   │   ├── 41-utility-types-required.ts
+│   │   ├── 42-utility-types-readonly.ts
+│   │   ├── 43-utility-types-record.ts
+│   │   ├── 44-utility-types-pick.ts
+│   │   ├── 45-utility-types-omit.ts
+│   │   ├── 46-utility-types-exclude.ts
+│   │   ├── 47-utility-types-extract.ts
+│   │   ├── 48-utility-types-nonnullable.ts
+│   │   └── 49-utility-types-returntype.ts
+│   ├── index.ts
+│   └── template.html
+├── README.md
+├── package-lock.json
+├── package.json
+├── tsconfig.json
+└── webpack.config.js
+```
 
-以下為 webpack 5 建構 typescript 流程(可忽略)
+## webpack 5 建構 typescript 流程
 
 <details>
   <summary>點擊顯示</summary>
