@@ -21,7 +21,7 @@ function getFullName() {
   return myName;
 }
 const fullName = getFullName();
-// 因回傳的 fullName 是 unknown，若未使用 typof 判斷型別，使用 fullName 會報錯。
+// 因回傳的 fullName 是 unknown，若未使用 typeof 判斷型別，使用 fullName 會報錯。
 if (typeof fullName === 'string') {
   fullName.split('')
 }
