@@ -1,6 +1,7 @@
 /**
  * unknown 和 any 很像
  * unknown 是比較安全的 any
+ * 使用 unknown 類型時，會要求明確處理類型檢查，不能像 any 隨意調用任何方法或屬性。 
  * ts 用太多 any 不如直接就寫 js
  */
 
