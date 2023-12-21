@@ -57,12 +57,10 @@ Node.js 版本 v16
 └── webpack.config.js
 ```
 
-## webpack 5 建構 typescript 流程
 
-<details>
-  <summary>點擊顯示</summary>
-  
-  ## 安裝 webpack 5
+# 使用 webpack 5 建構 TypeScript 環境
+
+## 安裝 webpack 5
   ```
   npm i webpack -D
   ```
@@ -370,4 +368,3 @@ Node.js 版本 v16
   + background-image: url('@/images/ball_1.png');
   }
   ```
-</details>
