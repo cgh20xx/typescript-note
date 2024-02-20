@@ -46,4 +46,5 @@ let nu2: null  // type 為 null
 let something;
 something = 7;
 
-export {} // 新增 export {} 到所有檔案，使 ts 能將每個檔案視為獨立的模組，避免變數名稱衝突。
+//export {} // 新增 export {} 到所有檔案，使 ts 能將每個檔案視為獨立的模組，避免變數名稱衝突。
+// 若有在 tsconfig 設定 "moduleDetection": "force" 上面就不用 export {}

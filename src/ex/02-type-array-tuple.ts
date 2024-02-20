@@ -38,4 +38,5 @@ tom.push('male');
 // tom.push(true); // Argument of type 'true' is not assignable to parameter of type 'string | number'.
 console.log('tom:', tom);
 
-export {}
+// export {}
+let num1: number = 100

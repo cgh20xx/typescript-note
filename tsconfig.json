@@ -20,6 +20,7 @@
     "baseUrl": "./src",
     "paths": {
       "@/*": ["*"]
-    }
+    },
+    "moduleDetection": "force" // 強制視所有的 ts 皆為 module
   }
 }
