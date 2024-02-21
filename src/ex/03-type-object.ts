@@ -1,6 +1,7 @@
 /**
  * 物件及屬性的型別
- * 屬性後面加?表示可選
+ * 
+ * 屬性後面加 ? 表示可選 (可選的屬性必定 | undefined)
  */
 let obj: { name: string, age?: number }
 
