@@ -18,6 +18,7 @@ Node.js 版本 v16
 │   │   ├── 04-type-assertion.ts
 │   │   ├── 05-type-union-never.ts
 │   │   ├── 06-type-define.ts
+│   │   ├── 06-type-void.ts
 │   │   ├── 07-interface-define.ts
 │   │   ├── 08-interface-vs-type.ts
 │   │   ├── 09-enum.ts
