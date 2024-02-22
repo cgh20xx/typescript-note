@@ -19,10 +19,10 @@
 // 然而這樣有一個缺點，就是不能夠精確的表達，輸入為數字的時候，
 // 輸出也應該為數字，輸入為字串的時候，輸出也應該為字串。
 
-// 這時，我們可以使用過載定義多個 reverse 的函式型別：
+// 這時，我們可以使用重載特徵(overload signatures) 宣告多個不同版本的函數名稱、參數和回傳型別
 function reverse(x: number): number;
 function reverse(x: string): string;
-// 加入以上兩行
+// 最後再一個實作特徵(implementation signature)，實作特徵必預與所有重載特徵相容
 function reverse(x: number | string): number | string {
   if (typeof x === 'number') {
       return Number(x.toString().split('').reverse().join(''));
