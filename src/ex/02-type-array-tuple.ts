@@ -98,4 +98,14 @@ unionArray[0] = 456; // ok
 const readonlyTuple = [123, 'Tom'] as const;
 // readonlyTuple[0]= 456; // 錯誤：Cannot assign to '0' because it is a read-only property.
 
+// 改寫上一個範例。使用更方便的 as const 斷言
+// 回傳類別：readonly [string, number]
+function firstCharAndSizeAsConst(str: string) {
+  return [str[0], str.length] as const;
+}
+
+// firstChar2: string
+// size2: number
+const [firstChar2, size2] = firstCharAndSizeAsConst('hello');
+
 export {};
