@@ -87,6 +87,15 @@ function firstCharAndSizeExplicit(str: string): [string, number] {
 // firstChar1: string
 // size1: number
 const [firstChar1, size1] = firstCharAndSizeExplicit('hello');
-//
+
+// ======== 常數斷言元組 (const assertion tuple) ========
+
+// 型別 (string | number)[]，可以任意修改
+const unionArray = [123, 'Tom'];
+unionArray[0] = 456; // ok
+
+// 型別：readonly [123, "Tom"], 不可修改
+const readonlyTuple = [123, 'Tom'] as const;
+// readonlyTuple[0]= 456; // 錯誤：Cannot assign to '0' because it is a read-only property.
 
 export {};
