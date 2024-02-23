@@ -52,4 +52,20 @@ const pairLoose = [false, 123];
 // Target requires 2 element(s) but source may have fewer.ts(2322)
 // 雖然 pairLoose 和 pairTupleLoose 看起來長度一樣，但是型別不同
 
+// ======== 元組作為剩餘參數 ========
+function logPair(name: string, age: number): void {
+  console.log(`${name}: ${age}`);
+}
+
+// 類型：(string | number)[]
+const pairArray = ['hank', 99];
+
+// logPair(...pairArray);
+// 錯誤：A spread argument must either have a tuple type or be passed to a rest parameter.ts
+// 擴展引數必須具有元組類型或傳遞給剩餘參數。
+// 嘗試傳入 (string | number)[] 給 logPair 函式是不安全的，可能是相同的型別或是數量不一致。
+
+const pairTupleArray: [string, number] = ['hank', 99];
+logPair(...pairTupleArray); // 正確
+
 export {};
