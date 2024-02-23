@@ -68,4 +68,25 @@ const pairArray = ['hank', 99];
 const pairTupleArray: [string, number] = ['hank', 99];
 logPair(...pairTupleArray); // 正確
 
+// ======== 沒有明確宣回傳型別 ========
+// 回傳類別：(string | number)
+function firstCharAndSize(str: string) {
+  return [str[0], str.length];
+}
+
+// firstChar: string | number
+// size: string | number
+const [firstChar, size] = firstCharAndSize('hello');
+// 這樣寫會有問題，因為 firstChar 及 size 的型別是 string | number
+
+// ======== 明確宣告回傳元組型別 ========
+function firstCharAndSizeExplicit(str: string): [string, number] {
+  return [str[0], str.length];
+}
+
+// firstChar1: string
+// size1: number
+const [firstChar1, size1] = firstCharAndSizeExplicit('hello');
+//
+
 export {};
