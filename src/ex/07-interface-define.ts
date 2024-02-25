@@ -116,7 +116,9 @@ const basBoth2: HasBothFunctionTypes = {
   method: () => 'method',
 };
 
-// =========== 用介面表示陣列 ===========
+// =========== 索引特徵 index signature (用介面表示陣列) ===========
+// 在介面中，我們可以使用 [index: string]: string; 定義任意的字符串索引，
+// 使得索引的型別是字符串時，值的型別必須是字符串。
 interface NumberArray {
   [index: number]: number;
 }
@@ -125,7 +127,17 @@ let fibonacci: NumberArray = [1, 1, 2, 3, 5];
 // 雖然介面也可以用來描述陣列，但是我們一般不會這麼做，因為這種方式比前兩種方式複雜多了。
 // 不過有一種情況例外，那就是它常用來表示類陣列（Array-like Object)。
 
+// 索引特徵的常用方式：定義物件中的任意屬性的型別及值的型別
+interface WordCounts {
+  [key: string]: number;
+}
+const counts: WordCounts = {};
+counts.a = 1; // ok
+counts.b = 2; // ok
+// counts.c = '3' // error
+
 // =========== 呼叫特徵 call signatures (用介面定義函式的形狀) ===========
+// 在介面中 (xxx: string): void 這個就是 call signatures
 // 我們也可以使用介面的方式來定義一個函式需要符合的形狀：
 interface SearchFunc {
   (source: string, subString: string): boolean; // 定義一個2個參數的函式，回傳值是 boolean
