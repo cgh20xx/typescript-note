@@ -125,15 +125,32 @@ let fibonacci: NumberArray = [1, 1, 2, 3, 5];
 // 雖然介面也可以用來描述陣列，但是我們一般不會這麼做，因為這種方式比前兩種方式複雜多了。
 // 不過有一種情況例外，那就是它常用來表示類陣列（Array-like Object)。
 
-// =========== 用介面定義函式的形狀 ===========
+// =========== 呼叫特徵 call signatures (用介面定義函式的形狀) ===========
 // 我們也可以使用介面的方式來定義一個函式需要符合的形狀：
 interface SearchFunc {
-  (source: string, subString: string): boolean;
+  (source: string, subString: string): boolean; // 定義一個2個參數的函式，回傳值是 boolean
 }
 
 let mySearch: SearchFunc;
 mySearch = function (source: string, subString: string) {
   return source.search(subString) !== -1;
 };
+
+// 定義一個 function 帶有 count 屬性，沒有回傳值
+interface FunctionWithCount {
+  (): void; // 定義了一個沒有參數也沒有回傳值的函式
+  count: number; // 這裡定義了一個 count 靜態屬性
+}
+
+let hasCallCount: FunctionWithCount;
+
+function keepsTrackOfCalls() {
+  keepsTrackOfCalls.count += 1;
+  console.log(`I've been called ${keepsTrackOfCalls.count} times!`);
+}
+keepsTrackOfCalls.count = 0;
+
+hasCallCount = keepsTrackOfCalls;
+hasCallCount();
 
 export {};
