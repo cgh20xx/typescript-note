@@ -177,4 +177,18 @@ keepsTrackOfCalls.count = 0;
 hasCallCount = keepsTrackOfCalls;
 hasCallCount();
 
+// =========== 覆寫的屬性 ===========
+// 注意：子介面的屬性必需是父介面的子集
+interface WithNullableName {
+  name: string | null;
+}
+
+interface WithNotNullableName extends WithNullableName {
+  name: string; // ok
+}
+
+interface WithNumericName extends WithNullableName {
+  // name: number; // error
+}
+
 export {};
