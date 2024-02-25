@@ -22,14 +22,14 @@ function print<T>(data: T) {
 // }
 
 // 使用 print 會自動推導傳入的參數型別
-print('hank')
-print(123)
-print(true)
+print('hank');
+print(123);
+print(true);
 
 // 也可顯示的寫的泛型告訴傳入的參數型別
-print<string>('hank')
-print<number>(123)
-print<boolean>(true)
+print<string>('hank');
+print<number>(123);
+print<boolean>(true);
 
 // 若要傳入兩個以上的參數用逗號隔開
 // 一般來說 T 後面會接 U，就跟 for loop 大家習慣用 i j 一樣的意思
@@ -38,11 +38,11 @@ function hello<T, U>(text1: T, text2: U): T {
   let data1: T = text1;
   let data2: U = text2;
   console.log(data1, data2);
-  return data1
+  return data1;
 }
 
-hello('juby', 777) // 若沒有手動寫泛型會自動推導為 hello<"juby", number>
+hello('juby', 777); // 若沒有手動寫泛型會自動推導為 hello<"juby", number>
 
-hello<string, number>('juby2', 888)
+hello<string, number>('juby2', 888);
 
-export {}
+export {};

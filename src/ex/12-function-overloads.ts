@@ -25,13 +25,13 @@ function reverse(x: string): string;
 // 最後再一個實作特徵(implementation signature)，實作特徵必預與所有重載特徵相容
 function reverse(x: number | string): number | string {
   if (typeof x === 'number') {
-      return Number(x.toString().split('').reverse().join(''));
+    return Number(x.toString().split('').reverse().join(''));
   } else {
-      return x.split('').reverse().join('');
+    return x.split('').reverse().join('');
   }
 }
-reverse(123)
-reverse('hank')
+reverse(123);
+reverse('hank');
 
 // 上例中，我們重複定義了多次函式 reverse，前幾次都是函式定義，最後一次是函式實現。在編輯器的程式碼提示中，可以正確的看到前兩個提示。
 // 注意，TypeScript 會優先從最前面的函式定義開始匹配，所以多個函式定義如果有包含關係，需要優先把精確的定義寫在前面(上面)。
@@ -44,4 +44,4 @@ reverse('hank')
 // var myElem: HTMLDivElement;
 // var x = fn(myElem); // x: string, :)
 
-export {}
+export {};

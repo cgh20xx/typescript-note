@@ -1,7 +1,7 @@
 // -------- extend --------
 
 class Animal2 {
-  name: string
+  name: string;
   run() {
     console.log('animal2 run');
   }
@@ -13,12 +13,12 @@ class Dog2 extends Animal2 {
   }
 }
 
-const d2= new Dog2();
+const d2 = new Dog2();
 d2.run();
 
 // -------- constructor & super --------
 class Animal3 {
-  name: string
+  name: string;
   constructor(name: string) {
     console.log('Animal3 constructor');
     this.name = name;
@@ -33,7 +33,7 @@ class Dog3 extends Animal3 {
 
   // override 父層的 constructor
   constructor(name: string) {
-    super(name) // 一定要呼叫 super 否則 ts 會報錯
+    super(name); // 一定要呼叫 super 否則 ts 會報錯
   }
   run() {
     super.run(); // 呼叫父層的方法
@@ -52,7 +52,7 @@ d3.run();
 // 抽像類別可以實作方法和抽像方法，而介面只能定義方法(空的)。
 
 abstract class Animal4 {
-  name: string
+  name: string;
   constructor(name: string) {
     this.name = name;
   }
@@ -60,12 +60,12 @@ abstract class Animal4 {
     // 抽像類別可直接實作方法，但 interface 不行。
     console.log('animal3 run');
   }
-  abstract walk(): void // 抽像方法需被子類別繼承且實作
+  abstract walk(): void; // 抽像方法需被子類別繼承且實作
 }
 
 class Dog4 extends Animal4 {
   constructor(name: string) {
-    super(name) // 一定要呼叫 super 否則 ts 會報錯
+    super(name); // 一定要呼叫 super 否則 ts 會報錯
   }
   run() {
     console.log(`${this.name} run`);
@@ -78,4 +78,4 @@ class Dog4 extends Animal4 {
 const d4 = new Dog4('juby4');
 d4.walk();
 
-export {}
+export {};

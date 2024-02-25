@@ -17,16 +17,14 @@ function loggingIdentity<T extends Lengthwise>(arg: T): T {
 }
 // 上例中，我們使用了 extends 約束了泛型 T 必須符合介面 Lengthwise 的形狀，也就是必須包含 length 屬性。
 
-loggingIdentity([1, 2, 3])
-loggingIdentity('abc')
+loggingIdentity([1, 2, 3]);
+loggingIdentity('abc');
 // loggingIdentity(123) // error: Argument of type 'number' is not assignable to parameter of type 'Lengthwise'.ts(2345)
-
-
 
 // 多個型別引數之間也可以互相約束：
 function copyFields<T extends U, U>(target: T, source: U): T {
   for (let id in source) {
-      target[id] = (<T>source)[id]; // *注釋1
+    target[id] = (<T>source)[id]; // *注釋1
   }
   return target;
 }
@@ -37,10 +35,9 @@ let res = copyFields(x, { b: 10, d: 20 });
 console.log(res); // Object { a: 1, b: 10, c: 3, d: 20 }
 // 上例中，我們使用了兩個型別引數，其中要求 T 繼承 U，這樣就保證了 U 上不會出現 T 中不存在的欄位。(換句話說：T一定要存在著U上的欄位)
 
-
 // *注釋1：
 // <T>source 使用了類型斷言（Type Assertion）的語法，
 // 用於告訴 TypeScript 編譯器將 source 視為 T 型別。
 // 這樣做是為了確保 target 和 source 具有相同的屬性，
 // 以便將 source 的值複製到 target 中。
-export {}
+export {};

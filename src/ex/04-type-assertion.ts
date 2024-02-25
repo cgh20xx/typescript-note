@@ -15,8 +15,8 @@
 
 // 總體而言，兩種語法形式在大多數情況下是等價的，可以根據個人喜好和代碼風格選擇使用。然而，在使用 JSX 或 TSX 語法的代碼中，建議使用 值 as 型別 的語法形式，以避免與 JSX/TSX 語法的衝突。
 
-let name2: unknown = 'hank2'
-let name3 = name2 as string
+let name2: unknown = 'hank2';
+let name3 = name2 as string;
 
 // 有時候，我們需要在還不確定型別的時候就訪問其中一個型別的屬性或方法，比如
 // function getLength(something: string | number): number {
@@ -38,9 +38,9 @@ let name3 = name2 as string
 function getLength(something: string | number): number {
   // 第一種寫法(泛型)
   if ((<string>something).length) {
-      return (<string>something).length;
+    return (<string>something).length;
   } else {
-      return something.toString().length;
+    return something.toString().length;
   }
   // 第二種寫法(as)
   // if ((something as string).length) {
@@ -49,36 +49,35 @@ function getLength(something: string | number): number {
   //     return something.toString().length;
   // }
 }
-let len = getLength('abcde')
+let len = getLength('abcde');
 console.log('len abcde:', len);
-len = getLength(123)
+len = getLength(123);
 console.log('len 123:', len);
-
 
 // ========== 斷言的應用 ===========
 
-type ApiData = { 
-  userId: number,
-  id: number,
-  title: string,
-  completed: boolean
-}
+type ApiData = {
+  userId: number;
+  id: number;
+  title: string;
+  completed: boolean;
+};
 
 // 寫法1 (泛型)
 async function getData1() {
-  const res = await fetch('https://jsonplaceholder.typicode.com/todos/1')
+  const res = await fetch('https://jsonplaceholder.typicode.com/todos/1');
   // 使用 <ApiData> 強制給 data 指定物件型別
-  const data = <ApiData>(await res.json())
-  return data
+  const data = <ApiData>await res.json();
+  return data;
 }
 
 // 寫法2 (as)
 async function getData2() {
-  const res = await fetch('https://jsonplaceholder.typicode.com/todos/1')
+  const res = await fetch('https://jsonplaceholder.typicode.com/todos/1');
   // 使用 as 關鍵字強制給 data 指定物件型別
-  const data = await res.json() as ApiData
-  return data
+  const data = (await res.json()) as ApiData;
+  return data;
 }
 
-getData1().then(data => console.log(data))
-getData2().then(data => console.log(data))
+getData1().then((data) => console.log(data));
+getData2().then((data) => console.log(data));

@@ -8,10 +8,10 @@
 
 class BaseInfo {
   // public name: string = 'hank'
-  protected name: string = 'hank'
+  protected name: string = 'hank';
   // private name: string = 'hank'
   getName() {
-    return this.name
+    return this.name;
   }
 }
 
@@ -27,13 +27,12 @@ const userInfo = new UserInfo();
 // console.log(userInfo.name); // error: protected name 不可直接存取
 console.log(userInfo.getName());
 
-
 // js 原生 Private fields
 // 注意：tsconfig.js compilerOptions.target 需設定為 ES6 以上
 
 // 做用 # 符號表示 private
 class PrivateInfo {
-  #name: string = 'private name'
+  #name: string = 'private name';
   getName() {
     return this.#name;
   }
@@ -42,14 +41,13 @@ class PrivateInfo {
 const privateInfo = new PrivateInfo();
 console.log('privateInfo:', privateInfo);
 
-
 // 當建構函式修飾為 private 時，該類別不允許被繼承或者實例化：
 // 當建構函式修飾為 protected 時，該類別只允許被繼承：
 class Animal {
   public name;
-  private constructor (name: string) {
-      this.name = name;
-}
+  private constructor(name: string) {
+    this.name = name;
+  }
 }
 // class Cat extends Animal {
 //   constructor (name: string) {
@@ -61,4 +59,4 @@ class Animal {
 // 出現以下錯誤
 // index.ts(7,19): TS2675: Cannot extend a class 'Animal'. Class constructor is marked as private.
 // index.ts(13,9): TS2673: Constructor of class 'Animal' is private and only accessible within the class declaration.
-export {}
+export {};

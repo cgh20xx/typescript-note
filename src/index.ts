@@ -5,7 +5,7 @@
 // import './ex/04-type-assertion'
 // import './ex/05-type-union-never'
 // import './ex/06-type-define'
-import './ex/06-type-void'
+import './ex/06-type-void';
 // import './ex/07-interface-define'
 // import './ex/08-interface-vs-type'
 // import './ex/09-enum'

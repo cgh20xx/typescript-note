@@ -11,9 +11,9 @@ interface Card<T> {
 function printCardInfo<TT>(desc: TT): Card<TT> {
   const data: Card<TT> = {
     title: 'hank',
-    desc
-  }
-  return data
+    desc,
+  };
+  return data;
 }
 
 console.log(printCardInfo<string>('my desc'));
@@ -27,8 +27,8 @@ interface IPerson<T> {
 
 class Person<T> implements IPerson<T> {
   // 注意：Person 裡面的 T 和 IPerson 的 T 是在不同的 scope 只是剛好同名
-  name: T
-  age: number
+  name: T;
+  age: number;
   constructor(name: T) {
     this.name = name;
   }
@@ -38,4 +38,4 @@ class Person<T> implements IPerson<T> {
 const person = new Person<string>('hank'); // 有手動寫泛型就可檢查到第一個參數是否符合泛型型別
 console.log('person:', person);
 
-export {}
+export {};

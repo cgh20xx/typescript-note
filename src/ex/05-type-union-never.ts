@@ -5,13 +5,13 @@
  */
 
 // union
-let arr9: (string | number)[] = []
-arr9.push('hank')
-arr9.push(123)
+let arr9: (string | number)[] = [];
+arr9.push('hank');
+arr9.push(123);
 
-let text1: string | number
-text1 = 'hank' // pass
-text1 = 123 // pass
+let text1: string | number;
+text1 = 'hank'; // pass
+text1 = 123; // pass
 // text1 = true // error
 
 // never
@@ -21,11 +21,11 @@ text1 = 123 // pass
 // }
 
 // 強制斷言
-let text2 = 123
+let text2 = 123;
 // 假設有特殊需求要將 text3 強制改為其它型別(如打API回來型別不同?)
-// 可先斷言成 any 或 unknow(推薦) 再斷言成其它型別
+// 可先斷言成 any 或 unknown(推薦) 再斷言成其它型別
 // let text3 = text2 as unknown as string
-let text3 = text2.toString()
-text3 = 'abc'
+let text3 = text2.toString();
+text3 = 'abc';
 
-export {}
+export {};

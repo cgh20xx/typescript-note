@@ -6,14 +6,14 @@
  */
 
 interface People {
-  name: string
-  age: number
+  name: string;
+  age: number;
 }
 
 const people: People = {
   name: 'hank',
-  age: 10
-}
+  age: 10,
+};
 
 // 上面的例子中，我們定義了一個介面 People tom，它的型別是 People 。這樣，我們就約束了 people 的形狀必須和介面 People 一致。
 // 多一些屬性也是不允許的
@@ -27,9 +27,8 @@ interface Person {
 }
 
 let tom: Person = {
-  name: 'Tom'
+  name: 'Tom',
 };
-
 
 // =========== 任意屬性 ===========
 // 有時候我們希望一個介面允許有任意的屬性，可以使用如下方式：
@@ -60,8 +59,6 @@ let tom2: Person2 = {
 
 // 上例中，任意屬性的值允許是 string，但是可選屬性 age 的值卻是 number，number 不是 string 的子屬性，所以報錯了。
 
-
-
 // =========== 唯讀屬性 ===========
 // 有時候我們希望物件中的一些欄位只能在建立的時候被賦值，那麼可以用 readonly 定義唯讀屬性：
 interface Person4 {
@@ -74,13 +71,12 @@ interface Person4 {
 let tom4: Person4 = {
   id: 89757,
   name: 'Tom',
-  gender: 'male'
+  gender: 'male',
 };
 // tom4.id = 9527; // Cannot assign to 'id' because it is a read-only property.ts(2540)
 
 // 上例中，使用 readonly 定義的屬性 id 初始化後，又被賦值了，所以報錯了。
 // 注意：唯讀的約束存在於第一次給「物件」賦值的時候，而不是第一次給「唯讀屬性」賦值的時候：
-
 
 // =========== 用介面表示陣列 ===========
 interface NumberArray {
@@ -91,7 +87,6 @@ let fibonacci: NumberArray = [1, 1, 2, 3, 5];
 // 雖然介面也可以用來描述陣列，但是我們一般不會這麼做，因為這種方式比前兩種方式複雜多了。
 // 不過有一種情況例外，那就是它常用來表示類陣列（Array-like Object)。
 
-
 // =========== 用介面定義函式的形狀 ===========
 // 我們也可以使用介面的方式來定義一個函式需要符合的形狀：
 interface SearchFunc {
@@ -99,8 +94,8 @@ interface SearchFunc {
 }
 
 let mySearch: SearchFunc;
-mySearch = function(source: string, subString: string) {
+mySearch = function (source: string, subString: string) {
   return source.search(subString) !== -1;
-}
+};
 
-export {}
+export {};
