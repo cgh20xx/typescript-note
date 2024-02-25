@@ -92,6 +92,28 @@ const Person5 = {
 Person5.id = 886; // 可以改
 logPerson(Person5);
 
+// =========== 介面裡屬性及方法的宣告 ===========
+// 介面裡屬性及方法的宣告，可以是函式的形狀
+interface HasBothFunctionTypes {
+  property: () => string; // 宣告屬性(屬性為函式)
+  method(): string; // 宣告方法
+}
+
+const hasBoth1: HasBothFunctionTypes = {
+  property: () => 'property',
+  method() {
+    return 'method';
+  },
+};
+
+// 可以跟上面的範例交換位置，是一樣的
+const basBoth2: HasBothFunctionTypes = {
+  property() {
+    return 'property';
+  },
+  method: () => 'method',
+};
+
 // =========== 用介面表示陣列 ===========
 interface NumberArray {
   [index: number]: number;
