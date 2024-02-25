@@ -92,8 +92,10 @@ const Person5 = {
 Person5.id = 886; // 可以改
 logPerson(Person5);
 
-// =========== 介面裡屬性及方法的宣告 ===========
+// =========== 介面裡屬性函數及方法的宣告 ===========
 // 介面裡屬性及方法的宣告，可以是函式的形狀
+// 注意：屬性可以宣告為 readonly，但方法不行
+// 建議：若已知屬性是函式，則直接宣告為方法，不要宣告為屬性再指定函式！
 interface HasBothFunctionTypes {
   property: () => string; // 宣告屬性(屬性為函式)
   method(): string; // 宣告方法
