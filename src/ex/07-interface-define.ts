@@ -78,6 +78,20 @@ let tom4: Person4 = {
 // 上例中，使用 readonly 定義的屬性 id 初始化後，又被賦值了，所以報錯了。
 // 注意：唯讀的約束存在於第一次給「物件」賦值的時候，而不是第一次給「唯讀屬性」賦值的時候：
 
+// readonly 修飾符只存在於型別系統中，並僅限於該介面使用
+function logPerson(person: Person4) {
+  console.log(person.id);
+  // person.id = 123 // 不能改
+}
+
+const Person5 = {
+  id: 9527,
+  name: 'John',
+};
+
+Person5.id = 886; // 可以改
+logPerson(Person5);
+
 // =========== 用介面表示陣列 ===========
 interface NumberArray {
   [index: number]: number;
