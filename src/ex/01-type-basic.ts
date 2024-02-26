@@ -26,10 +26,10 @@ let unusable: void = undefined;
 
 // 注意：在 tsconfig.json strictNullChecks = false (預設為 false)的情況，
 // 若已指定型別但又手動給值為 null 或 undefined 是給過的，如下：
-// let num3: number = null
-// let str3: string = null
-// let boo3: boolean = null
-// let syb3: symbol = null
+// let num4: number = null;
+// let str4: string = null;
+// let boo4: boolean = null;
+// let syb4: symbol = null;
 
 // 注意：在 tsconfig.json strictNullChecks = false (預設為 false)的情況，
 // 若手動指定 undefined 或 null 系統會自動推斷 type 為 any

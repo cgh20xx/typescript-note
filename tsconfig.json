@@ -10,7 +10,7 @@
     "jsx": "react",
     "allowJs": false,
     "moduleResolution": "node",
-    "strictNullChecks": true,
+    // "strictNullChecks": true, // 預設為 false，有設定 strict: true 就不用設定 strictNullChecks: true
     "strict": true,
     // 在 TypeScript 中，strict 選項是一個啟用所有嚴格型別檢查選項的集合。當你在 tsconfig.json 檔案中設定 "strict": true 時，以下的選項會被啟用：
     // noImplicitAny: 當函式參數的型別是 any 且沒有明確指定型別時，會產生錯誤。
