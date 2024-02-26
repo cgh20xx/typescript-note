@@ -87,4 +87,21 @@ class ActivitiesQueue {
 const activities = new ActivitiesQueue();
 activities.init(['hi', 'hello']);
 
+// =========== 唯讀屬性 readonly ===========
+// 注意：宣告為具有本初始數值的唯讀屬性與其它屬性相比，比較特殊。
+// 若未明確的定義型別，它們可能被推斷為經過數值窄化的`字面`型別，類似 const。
+class RandomQuote {
+  // 型別: string
+  readonly explicit: string = 'abc'; // 明確定義型別
+  // 型別: 窄化為 "def" 的字面型別，並非 string
+  readonly implicit = 'def'; // 未明確定義型別
+
+  constructor() {
+    if (Math.random() > 0.5) {
+      this.explicit = '123'; // ok
+      // this.implicit = '456' // error: Type "456" is not assignable to type '"def"'.ts(2322)
+    }
+  }
+}
+
 export {};
