@@ -66,4 +66,25 @@ class WithProperty {
 
 console.log(new WithProperty().myProperty === new WithProperty().myProperty); // false
 
+// =========== 使用 ! 符號關閉嚴格的初始化檢查 ===========
+// 僅管嚴格的初始化檢查，在大多數的情況下很有用，但可能會遇到一些問題，
+// 也就是在類別建構函數之後，故意取消能夠指派的類別屬性，如果絕對確保一個屬性不需要套用嚴格的初始化檢查，
+// 可以在屬性後面加上 ! 符號，這樣 ts 即可關閉檢查。
+// 增加一個 ! 斷言並降低屬性的型別安全性，這並非一個好的方式，應考慮重構，避免這樣的斷言使用。
+class ActivitiesQueue {
+  // pending: string[]; // 錯誤：Property 'pending' has no initializer and is not definitely assigned in the constructor.ts(2564)
+  pending!: string[]; // 正確：使用 ! 能關閉嚴格的初始化檢查
+
+  init(pending: string[]) {
+    this.pending = pending;
+  }
+
+  next() {
+    return this.pending.pop();
+  }
+}
+
+const activities = new ActivitiesQueue();
+activities.init(['hi', 'hello']);
+
 export {};
