@@ -57,6 +57,11 @@ console.log('makeSound:', animal.makeSound());
 class Point {
   x: number;
   y: number;
+
+  constructor() {
+    this.x = 0;
+    this.y = 0;
+  }
 }
 
 interface Point3d extends Point {
