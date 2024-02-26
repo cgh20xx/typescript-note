@@ -6,7 +6,7 @@ class User {
   name: string;
   age: number;
   addr: string = '沒有地址'; // 除了宣告實例屬性的 type，也可直接定義實例屬性的值
-  // test: string; 當 tsconfig 中 strict 或是 strictPropertyInitialization 為 true 時，會報錯，因為沒有在 constructor 中初始化
+  // test: string; 當 tsconfig 中 strict 或是 strictPropertyInitialization 為 true 時，會報錯，因為沒有被指定初始值或在 constructor 中初始化
 
   constructor(name: string, age: number, addr?: string) {
     this.name = name;
