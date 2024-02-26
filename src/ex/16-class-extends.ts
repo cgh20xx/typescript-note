@@ -2,6 +2,11 @@
 
 class Animal2 {
   name: string;
+
+  constructor(name: string) {
+    this.name = name;
+  }
+
   run() {
     console.log('animal2 run');
   }
@@ -13,7 +18,7 @@ class Dog2 extends Animal2 {
   }
 }
 
-const d2 = new Dog2();
+const d2 = new Dog2('juby2');
 d2.run();
 
 // -------- constructor & super --------
