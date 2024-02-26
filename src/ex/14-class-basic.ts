@@ -50,4 +50,19 @@ const user3 = new User2({
 });
 console.log('user3:', user3);
 
+// =========== 類別的函數屬性 ===========
+
+// 在成員名稱後面加上()的方法，將函數指派給類別的 prototype 屬性
+class WithMethod {
+  myMethod() {}
+}
+console.log(new WithMethod().myMethod === new WithMethod().myMethod); // true
+
+// 宣告一個屬性，其值恰好是一個函數，這將為類別的每個實體建立一個新函數
+class WithProperty {
+  myProperty = () => {};
+}
+
+console.log(new WithProperty().myProperty === new WithProperty().myProperty); // false
+
 export {};
