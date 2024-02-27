@@ -83,4 +83,43 @@ class Dog4 extends Animal4 {
 const d4 = new Dog4('juby4');
 d4.walk();
 
+// -------- 覆寫方法注意事項 --------
+// 與 js 不同，ts 覆寫方法有以下限制：
+// 1. 子類別覆寫父類別的方法，方法參數型別需一樣，但參數數量可以不一樣。
+// 2. 子類別覆寫父類別的方法，方法的返回值型別需一樣。
+//
+class GradeCounter {
+  countGrades(grades: string[], letter: string) {
+    return grades.filter((grade) => grade === letter).length;
+  }
+}
+
+// 錯誤：Type 'string[]' is not assignable to type 'number'.
+class FailureChecker1 extends GradeCounter {
+  // countGrades(num: number) {
+  //   return num;
+  // }
+}
+
+// 錯誤：Type 'boolean' is not assignable to type 'number'.ts(2416)
+class FailureChecker2 extends GradeCounter {
+  // countGrades(grades: string[]) {
+  //   return true;
+  // }
+}
+
+// 正確
+class SuccessChecker3 extends GradeCounter {
+  countGrades(grades: string[]) {
+    return grades.length;
+  }
+}
+
+// 正確
+class SuccessChecker4 extends GradeCounter {
+  countGrades(grades: string[]) {
+    return super.countGrades(grades, 'A');
+  }
+}
+
 export {};
