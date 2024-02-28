@@ -1,8 +1,8 @@
 // class generics 泛型類別
 
 class GenericNumber<T> {
-  zeroValue: T;
-  add: (x: T, y: T) => T;
+  zeroValue!: T;
+  add!: (x: T, y: T) => T;
 }
 
 let myGenericNumber = new GenericNumber<number>();

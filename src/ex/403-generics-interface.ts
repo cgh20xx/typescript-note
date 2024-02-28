@@ -26,11 +26,11 @@ interface IPerson<T> {
 }
 
 class Person<T> implements IPerson<T> {
-  // 注意：Person 裡面的 T 和 IPerson 的 T 是在不同的 scope 只是剛好同名
   name: T;
   age: number;
   constructor(name: T) {
     this.name = name;
+    this.age = 0;
   }
 }
 
