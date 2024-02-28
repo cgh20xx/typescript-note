@@ -35,3 +35,22 @@ function logValueIfExists3(value: number | string | null | undefined) {
     value.toString(); // OK
   }
 }
+
+// 要注意的是，因為型別敘述在錯誤的情況下也會窄化型別，如果型別敘述檢查的不僅僅是其輸入型別，可能會得到意想不到的結果。
+// 故意將 input 的型別多加一個 undefined
+function isLongString(input: string | undefined): input is string {
+  return !!(input && input.length > 10);
+}
+
+function workWithText(text: string | undefined) {
+  if (isLongString(text)) {
+    // text: string
+    console.log('Long text:', text.length); // OK
+  } else {
+    // text 不如預期，並非為 string，而是 undefined
+    // text: undefined
+    console.log('Short text:', text); // OK
+  }
+}
+
+// 補充：如最後一個例子，驗証屬性或數值很容易讓型別敘述被誤用。通常建議盡可能避免使用它，對於大多數的情況，簡單的型別敘述就足夠了！
