@@ -26,6 +26,7 @@ Node.js 版本 v16 -> v20
 │   │   ├── 202-function-generics.ts
 │   │   ├── 203-function-overloads.ts
 │   │   ├── 204-function-rest.ts
+│   │   ├── 205-function-type-predicate.ts
 │   │   ├── 301-class-basic.ts
 │   │   ├── 302-class-extends.ts
 │   │   ├── 303-class-interface.ts

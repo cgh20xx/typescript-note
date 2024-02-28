@@ -2,7 +2,7 @@
 // import './ex/102-type-array-tuple';
 // import './ex/103-type-object';
 // import './ex/104-type-any-unknown';
-import './ex/105-type-assertion';
+// import './ex/105-type-assertion';
 // import './ex/106-type-union-never';
 // import './ex/107-type-define';
 // import './ex/108-type-void';
@@ -12,6 +12,7 @@ import './ex/105-type-assertion';
 // import './ex/202-function-generics';
 // import './ex/203-function-overloads';
 // import './ex/204-function-rest';
+import './ex/205-function-type-predicate';
 // import './ex/301-class-basic';
 // import './ex/302-class-extends';
 // import './ex/303-class-interface';
