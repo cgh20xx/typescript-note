@@ -12,7 +12,7 @@
 // import './ex/202-function-generics';
 // import './ex/203-function-overloads';
 // import './ex/204-function-rest';
-import './ex/205-function-type-predicate';
+// import './ex/205-function-type-predicate';
 // import './ex/301-class-basic';
 // import './ex/302-class-extends';
 // import './ex/303-class-interface';
@@ -24,7 +24,7 @@ import './ex/205-function-type-predicate';
 // import './ex/404-generics-constraints';
 // import './ex/405-generics-extends';
 // import './ex/406-generics-extends-infer';
-// import './ex/407-generics-keyof';
+import './ex/407-generics-keyof';
 // import './ex/801-utility-types-partial';
 // import './ex/802-utility-types-required';
 // import './ex/803-utility-types-readonly';
