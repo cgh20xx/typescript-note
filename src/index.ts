@@ -24,7 +24,7 @@
 // import './ex/404-generics-constraints';
 // import './ex/405-generics-extends';
 // import './ex/406-generics-extends-infer';
-import './ex/407-generics-keyof';
+// import './ex/407-generics-keyof';
 // import './ex/801-utility-types-partial';
 // import './ex/802-utility-types-required';
 // import './ex/803-utility-types-readonly';
@@ -37,3 +37,4 @@ import './ex/407-generics-keyof';
 // import './ex/811-utility-types-returntype';
 // import './ex/901-enum';
 // import './ex/902-declaration-files';
+import './ex/903-typeof';
