@@ -88,4 +88,15 @@ logWrapper<string>((input) => {
   console.log('input.length:', input.length);
 });
 
+// ========= 多個函數參數型別 =========
+// 注意：要馬直接省略不寫泛型引數，讓 TypeScript 自動推導，要馬就要明確指定所有泛型引數，一個都不能少。
+
+// 此範例中，我們定義了一個函式 makeTuple，它接受兩個參數，並將它們作為元組返回。
+function makeTuple<First, Second>(arg1: First, arg2: Second) {
+  return [arg1, arg2] as const;
+}
+
+// 型別：[boolean, string]
+makeTuple(true, 'abc');
+
 export {};
