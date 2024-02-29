@@ -3,6 +3,21 @@
 
 // function generics
 
+function identity<T>(input: T) {
+  return input;
+}
+
+// 注意：泛型若未指定型別，則會自動推導。推導如下：
+
+// 型別：123
+const numeric = identity(123);
+// 型別：number
+const numericExplicit = identity<number>(123);
+// 型別：'abc'
+const stringy = identity('abc');
+// 型別：string
+const stringyExplicit = identity<string>('abc');
+
 // 首先，我們來實現一個函式 createArray，它可以建立一個指定長度的陣列，同時將每一項都填充一個預設值
 function createArray1(length: number, value: any): any[] {
   let result = [];
