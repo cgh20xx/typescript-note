@@ -23,7 +23,7 @@ if (Math.random() > 0.5) {
 
 // ========== keyof 與 typeof 應用 ==========
 // keyof 是用來取得物件索引上的鍵值
-// typeof 是用來取得物倬索引的值的型別
+// typeof 是用來取得物件索引的值的型別
 
 const ratings = {
   user: 7.5,
