@@ -81,3 +81,24 @@ async function getData2() {
 
 getData1().then((data) => console.log(data));
 getData2().then((data) => console.log(data));
+
+// ========== 斷言與宣告 ===========
+interface Entertainer {
+  name: string;
+  acts: string[];
+}
+
+// 範例1：使用型別註記，會正確提醒缺少的屬性
+// const declared: Entertainer = {
+//   name: 'Hank'
+// }
+// 錯誤：Property 'acts' is missing in type '{ name: string; }' but required in type 'Entertainer'.ts(2741)
+
+// 範例2：使用型別斷言，不會報錯，但是會失去提醒
+const asserted = {
+  name: 'Hank',
+} as Entertainer; // 正確，但可能會造成執行時錯誤
+
+console.log(asserted.acts.join(', ')); // TypeError: Cannot read property 'join' of undefined
+
+// 因為強列建議使用型別註記或是讓 TypeScript 自行從變數的數初值推斷變數的型別。
