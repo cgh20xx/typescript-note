@@ -67,11 +67,7 @@ function logWrapper<T>(callback: (input: T) => void) {
   };
 }
 
-// 回傳型別：(input: string) => void
-logWrapper((input: string) => {
-  console.log('input.length:', input.length);
-});
-
+// Bad 寫法：
 // 注意：TypeScript 無法推斷的任何'引數型別'，預設假定為 unknown
 // 回傳型別：(input: unknown) => void
 logWrapper((input) => {
@@ -79,6 +75,13 @@ logWrapper((input) => {
   // 錯誤：'input' is of type 'unknown'.ts(18046)
 });
 
+// Good 寫法1：(二擇一)
+// 回傳型別：(input: string) => void
+logWrapper((input: string) => {
+  console.log('input.length:', input.length);
+});
+
+// Good 寫法2：(二擇一)
 // 明確的指出引數型別為 string
 // 回傳型別：(input: string) => void
 logWrapper<string>((input) => {
