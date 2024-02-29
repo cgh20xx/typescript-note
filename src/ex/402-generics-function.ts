@@ -58,4 +58,31 @@ function createArray3<T = string>(length: number, value: T): T[] {
   return result;
 }
 
+// ========= 明確的泛型呼叫 =========
+
+function logWrapper<T>(callback: (input: T) => void) {
+  return (input: T) => {
+    console.log('Input:', input);
+    callback(input);
+  };
+}
+
+// 回傳型別：(input: string) => void
+logWrapper((input: string) => {
+  console.log('input.length:', input.length);
+});
+
+// 注意：TypeScript 無法推斷的任何'引數型別'，預設假定為 unknown
+// 回傳型別：(input: unknown) => void
+logWrapper((input) => {
+  // console.log('input.length:', input.length);
+  // 錯誤：'input' is of type 'unknown'.ts(18046)
+});
+
+// 明確的指出引數型別為 string
+// 回傳型別：(input: string) => void
+logWrapper<string>((input) => {
+  console.log('input.length:', input.length);
+});
+
 export {};
