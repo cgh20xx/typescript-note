@@ -33,9 +33,11 @@ class Person<T> implements IPerson<T> {
     this.age = 0;
   }
 }
-
-// const person = new Person('hank'); // 沒手動寫泛型會根據參數自動推導為該參數的型別，無法檢查參數型別是否正確。
-const person = new Person<string>('hank'); // 有手動寫泛型就可檢查到第一個參數是否符合泛型型別
-console.log('person:', person);
+// 手動寫泛型會根據參數自動推導為該參數的型別，無法檢查參數型別是否正確。
+const person1 = new Person('hank'); // OK
+const person2 = new Person(123); // OK：但是這樣就不符合預期
+// 有手動寫泛型就可檢查到第一個參數是否符合泛型型別
+const person3 = new Person<string>('hank'); // OK：有手動寫泛型就可檢查到第一個參數是否符合泛型型別
+// const person4 = new Person<string>(123); // Error：Argument of type 'number' is not assignable to parameter of type 'string'.ts(2345)
 
 export {};
