@@ -40,4 +40,35 @@ const person2 = new Person(123); // OK：但是這樣就不符合預期
 const person3 = new Person<string>('hank'); // OK：有手動寫泛型就可檢查到第一個參數是否符合泛型型別
 // const person4 = new Person<string>(123); // Error：Argument of type 'number' is not assignable to parameter of type 'string'.ts(2345)
 
+// ========== TS 內建的 Array<T> 就是泛型介面 ============
+interface Array<T> {
+  /**
+   * Gets or sets the length of the array. This is a number one higher than the highest index in the array.
+   */
+  length: number;
+  /**
+   * Returns a string representation of an array.
+   */
+  toString(): string;
+  /**
+   * Returns a string representation of an array. The elements are converted to string using their toLocaleString methods.
+   */
+  toLocaleString(): string;
+  /**
+   * Removes the last element from an array and returns it.
+   * If the array is empty, undefined is returned and the array is not modified.
+   */
+  pop(): T | undefined;
+  /**
+   * Appends new elements to the end of an array, and returns the new length of the array.
+   * @param items New elements to add to the array.
+   */
+  push(...items: T[]): number;
+  // 以下省略
+}
+
+const arr = [1, 2, 3];
+arr.push(4); // OK
+// arr.push('abc'); // Error：Argument of type 'string' is not assignable to parameter of type 'number'.ts(2345)
+
 export {};
