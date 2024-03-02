@@ -1,4 +1,27 @@
-// interface generics
+// ========== 泛型介面的實作 ============
+// 不論是繼承泛型類別，或是實作泛型介面，子類別或子介面都需要`明確指定泛型的型別`。
+
+interface ActingCredit<Role> {
+  role: Role;
+}
+
+class MoviePart implements ActingCredit<string> {
+  role: string;
+  speaking: boolean;
+  constructor(role: string, speaking: boolean) {
+    this.role = role;
+    this.speaking = speaking;
+  }
+}
+
+const role = new MoviePart('hank', true).role; // 型別：string
+
+// 錯誤屬性型別範例：
+// class IncorrectExtension implements ActingCredit<string> {
+//   role: boolean; // 錯誤：Property 'role' in type 'IncorrectExtension' is not assignable to the same property in base type 'ActingCredit<string>'.
+// }
+
+// ========== 泛型介面 ============
 
 // 範例1：
 // 定義介面 Card 的 desc 屬性類型是由外部決定
