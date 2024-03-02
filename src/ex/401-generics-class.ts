@@ -72,7 +72,7 @@ class CreatePairFactory<Key> {
   constructor(key: Key) {
     this.key = key;
   }
-  // 這邊建議手動返回 tuple 型別，不然會被推導為 (string | number)[]
+  // 這邊建議手動返回 tuple 型別，不然會被自動推導為 (Key | Value)[]
   createPair<Value>(value: Value): [Key, Value] {
     return [this.key, value];
   }
