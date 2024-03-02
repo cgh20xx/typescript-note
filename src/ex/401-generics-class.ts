@@ -66,4 +66,23 @@ new AttributeQuote(123, 'hank').lines; // 型別：number
 new AttributeQuote([1, 2, 3], 'hank').lines; // 型別：number[]
 // 這樣子類別就可讓 TypeScript 自動推導出屬性的型別，不需要再手動指定型別，跟上個例子 SpokenQuote 比，更為靈活。
 
+// ========== 泛型方法 ============
+class CreatePairFactory<Key> {
+  key: Key;
+  constructor(key: Key) {
+    this.key = key;
+  }
+  // 這邊建議手動返回 tuple 型別，不然會被推導為 (string | number)[]
+  createPair<Value>(value: Value): [Key, Value] {
+    return [this.key, value];
+  }
+}
+
+// 型別：CreatePairFactory<string>
+const factory = new CreatePairFactory('role');
+// 型別：[string, string]
+factory.createPair('hank');
+// 型別：[string, number]
+factory.createPair(123);
+
 export {};
