@@ -6,7 +6,7 @@ type Nullish<T> = T | null | undefined;
 type CreateValue<Input, Output> = (input: Input) => Output;
 
 // 型別：(input: Input) => Output
-let creator: CreateValue<string, number>;
+let creator: CreateValue<string, number>; // 一定要指定型別，無法自動推斷
 
 creator = (text) => text.length; // 正確
 
