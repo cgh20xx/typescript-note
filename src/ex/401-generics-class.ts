@@ -85,4 +85,47 @@ factory.createPair('hank');
 // 型別：[string, number]
 factory.createPair(123);
 
+// ========== 靜態類別方法的泛型 ============
+// 注意：靜態類別方法可以宣告自已的泛型參數，但不能使用類別的泛型參數。
+
+class BothLogger<OnInstance> {
+  /**
+   * 成員方法
+   */
+  instanceLog(value: OnInstance) {
+    console.log(value);
+    return value;
+  }
+
+  /**
+   * 靜態方法
+   */
+  static staticLog<OnStatic>(value: OnStatic) {
+    // let fromInstance = OnInstance; // 錯誤：Cannot find name 'OnInstance'.ts(2304)
+    console.log(value);
+    return value;
+  }
+}
+
+// 成員方法
+const logger1 = new BothLogger(); // 未明確指定型別，自動推斷型別：BothLogger<unknown>
+logger1.instanceLog([1, 2, 3]); // 型別：unknown
+
+const logger2 = new BothLogger<string>(); // 明確指定型別：BothLogger<string>
+logger2.instanceLog('hello world'); // 型別：string
+
+// 靜態方法
+// 靜態方法未明確指定型別，則會自動推斷型別
+BothLogger.staticLog('hello world'); // 型別："hello world"
+BothLogger.staticLog<string>('hello world'); // 型別：string
+
+BothLogger.staticLog([1, 2, 3]); // 型別：number[]
+BothLogger.staticLog<number[]>([1, 2, 3]); // 型別：number[]
+
+BothLogger.staticLog(123); // 型別：321
+BothLogger.staticLog<number>(321); // 型別：number
+
+let num = 456;
+BothLogger.staticLog(num); // 型別：number
+
 export {};
