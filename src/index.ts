@@ -25,7 +25,8 @@
 // import './ex/405-generics-extends';
 // import './ex/406-generics-extends-infer';
 // import './ex/407-generics-keyof';
-import './ex/408-generics-type';
+// import './ex/408-generics-type';
+import './ex/501-object-union';
 // import './ex/801-utility-types-partial';
 // import './ex/802-utility-types-required';
 // import './ex/803-utility-types-readonly';
