@@ -39,6 +39,7 @@ Node.js 版本 v16 -> v20
 │   │   ├── 405-generics-extends.ts
 │   │   ├── 406-generics-extends-infer.ts
 │   │   ├── 407-generics-keyof.ts
+│   │   ├── 408-generics-type.ts
 │   │   ├── 801-utility-types-partial.ts
 │   │   ├── 802-utility-types-required.ts
 │   │   ├── 803-utility-types-readonly.ts

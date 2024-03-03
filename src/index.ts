@@ -25,6 +25,7 @@
 // import './ex/405-generics-extends';
 // import './ex/406-generics-extends-infer';
 // import './ex/407-generics-keyof';
+import './ex/408-generics-type';
 // import './ex/801-utility-types-partial';
 // import './ex/802-utility-types-required';
 // import './ex/803-utility-types-readonly';
@@ -38,4 +39,4 @@
 // import './ex/901-enum';
 // import './ex/902-declaration-files';
 // import './ex/903-typeof';
-import './ex/904-non-null-assertion';
+// import './ex/904-non-null-assertion';
