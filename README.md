@@ -54,7 +54,8 @@ Node.js 版本 v16 -> v20
 │   │   ├── 901-enum.ts
 │   │   ├── 902-declaration-files.ts
 │   │   ├── 903-typeof.ts
-│   │   └── 904-non-null-assertion.ts
+│   │   ├── 904-non-null-assertion.ts
+│   │   └── 905-this-type.ts
 │   ├── index.ts
 │   └── template.html
 ├── README.md
