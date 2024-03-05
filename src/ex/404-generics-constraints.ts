@@ -26,7 +26,7 @@ loggingIdentity('abc');
 // 多個型別引數之間也可以互相約束：
 function copyFields<T extends U, U>(target: T, source: U): T {
   for (let id in source) {
-    target[id] = (<T>source)[id]; // *注釋1
+    target[id] = (source as T)[id]; // *注釋1
   }
   return target;
 }
@@ -35,10 +35,10 @@ let x = { a: 1, b: 2, c: 3, d: 4 };
 
 let res = copyFields(x, { b: 10, d: 20 });
 console.log(res); // Object { a: 1, b: 10, c: 3, d: 20 }
-// 上例中，我們使用了兩個型別引數，其中要求 T 繼承 U，這樣就保證了 U 上不會出現 T 中不存在的欄位。(換句話說：T一定要存在著U上的欄位)
+// 上例中，我們使用了兩個型別引數，其中要求 T extends(被限制於) U，這樣就保證了 U 上不會出現 T 中不存在的欄位。(換句話說：T 一定要存在著 U 上的欄位)
 
 // *注釋1：
-// <T>source 使用了類型斷言（Type Assertion）的語法，
+// 使用了 as 類型斷言（Type Assertion）的語法，
 // 用於告訴 TypeScript 編譯器將 source 視為 T 型別。
 // 這樣做是為了確保 target 和 source 具有相同的屬性，
 // 以便將 source 的值複製到 target 中。
