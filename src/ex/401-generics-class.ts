@@ -2,12 +2,13 @@
 // 類別實體也可以透過明確的引數型別來避免預設為 unknown，就像其它泛型函數呼叫一樣。
 
 class GenericNumber<T> {
+  // 定義 GenericNumber 的`參數型別` T
   zeroValue!: T;
   add!: (x: T, y: T) => T;
 }
 
 // 明確型別：GenericNumber<number>
-let myGenericNumber = new GenericNumber<number>();
+let myGenericNumber = new GenericNumber<number>(); // 傳入 number 作為`引數型別`
 myGenericNumber.zeroValue = 0;
 myGenericNumber.add = function (x, y) {
   return x + y;
@@ -19,7 +20,7 @@ console.log(sum);
 let myGenericUnknown = new GenericNumber();
 
 // ========== 擴充泛型類別 extends Class ============
-// TypeScript 不會嘗試從使用的情況中推薦基本類別(父類別)的引數型別。
+// TypeScript 不會嘗試從推斷基本類別(父類別)的引數型別。
 // 任何沒有預設值的引數型別，都需要使用一個明確的型別註記來指定。
 
 class Quote<T> {
@@ -32,7 +33,7 @@ class Quote<T> {
 new Quote('hello world').lines; // 型別：string
 new Quote([1, 2, 3]).lines; // 型別：number[]
 
-// 正確範例：擴充泛型類別明確指定型別(但子類別以後就只能接受固定的型別)
+// 正確範例：擴充泛型類別明確指定引數型別(但子類別以後就只能接受固定的型別)
 class SpokenQuote extends Quote<string[]> {
   speak() {
     console.log(this.lines.join('\n'));
@@ -64,7 +65,7 @@ class AttributeQuote<T2> extends Quote<T2> {
 new AttributeQuote('hello world', 'hank').lines; // 型別：string
 new AttributeQuote(123, 'hank').lines; // 型別：number
 new AttributeQuote([1, 2, 3], 'hank').lines; // 型別：number[]
-// 這樣子類別就可讓 TypeScript 自動推導出屬性的型別，不需要再手動指定型別，跟上個例子 SpokenQuote 比，更為靈活。
+// 這樣子類別就可讓 TypeScript 自動推導出屬性的型別，不需要再手動指定引數型別，跟上個例子 SpokenQuote 比，更為靈活。
 
 // ========== 泛型方法 ============
 class CreatePairFactory<Key> {
@@ -108,10 +109,10 @@ class BothLogger<OnInstance> {
 }
 
 // 成員方法
-const logger1 = new BothLogger(); // 未明確指定型別，自動推斷型別：BothLogger<unknown>
+const logger1 = new BothLogger(); // 未明確指定引數型別，自動推斷型別：BothLogger<unknown>
 logger1.instanceLog([1, 2, 3]); // 型別：unknown
 
-const logger2 = new BothLogger<string>(); // 明確指定型別：BothLogger<string>
+const logger2 = new BothLogger<string>(); // 明確指定引數型別：BothLogger<string>
 logger2.instanceLog('hello world'); // 型別：string
 
 // 靜態方法
