@@ -42,4 +42,33 @@ console.log(res); // Object { a: 1, b: 10, c: 3, d: 20 }
 // 用於告訴 TypeScript 編譯器將 source 視為 T 型別。
 // 這樣做是為了確保 target 和 source 具有相同的屬性，
 // 以便將 source 的值複製到 target 中。
+
+// ========== keyof 和限制參數型別 ==========
+// 一起使用 extends 和 keyof，允許參數型別限制為前一個參數型別的鍵值，這也是指定泛型型別鍵值的唯一方法。
+// 以下有二個範例，都不會有錯誤，但是回傳的型別會有所不同。
+
+// Good 寫法：使用 extends 限制參數型別，回傳準確的型別
+function getUseExtends<T, K extends keyof T>(obj: T, key: K) {
+  return obj[key];
+}
+
+// Bad 寫法：沒有使用 K extends 限制參數型別，回傳型別會是所有屬性值的聯集型別(Union Type)
+function getNoExtends<T>(obj: T, key: keyof T) {
+  return obj[key];
+}
+
+const drink = {
+  favorite: '五十嵐',
+  others: ['清心', '迷克夏'],
+  soldOut: false,
+};
+
+console.log(getUseExtends(drink, 'favorite')); // Good 返回型別：string
+console.log(getUseExtends(drink, 'others')); // Good 返回型別：string[]
+console.log(getUseExtends(drink, 'soldOut')); // Good 返回型別：boolean
+
+console.log(getNoExtends(drink, 'favorite')); // 返回型別：string | boolean | string[]
+console.log(getNoExtends(drink, 'others')); // 返回型別：string | boolean | string[]
+console.log(getNoExtends(drink, 'soldOut')); // 返回型別：string | boolean | string[]
+
 export {};
