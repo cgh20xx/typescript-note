@@ -1,4 +1,5 @@
 // ========= 泛型約束 Generic Constraints =========
+// 受限制的泛型型別，是將 extends 關鍵字放在泛型參數型別的名稱後面，然後是限制它的型別。
 
 // 在函式內部使用泛型變數的時候，由於事先不知道它是哪種型別，所以不能隨意的操作它的屬性或方法
 // function loggingIdentity<T>(arg: T): T {
@@ -11,6 +12,7 @@ interface Lengthwise {
   length: number;
 }
 
+// T 的型別被 Lengthwise 限制，所以它一定會有 length 屬性
 function loggingIdentity<T extends Lengthwise>(arg: T): T {
   console.log(arg.length);
   return arg;
