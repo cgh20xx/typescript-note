@@ -41,6 +41,7 @@ Node.js 版本 v16 -> v20
 │   │   ├── 407-generics-keyof.ts
 │   │   ├── 408-generics-type.ts
 │   │   ├── 409-generics-type-default.ts
+│   │   ├── 410-generics-promise.ts
 │   │   ├── 501-object-union.ts
 │   │   ├── 801-utility-types-partial.ts
 │   │   ├── 802-utility-types-required.ts

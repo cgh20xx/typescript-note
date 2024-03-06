@@ -27,6 +27,7 @@
 // import './ex/407-generics-keyof';
 // import './ex/408-generics-type';
 // import './ex/409-generics-type-default';
+// import './ex/410-generics-promise';
 // import './ex/501-object-union';
 // import './ex/801-utility-types-partial';
 // import './ex/802-utility-types-required';
