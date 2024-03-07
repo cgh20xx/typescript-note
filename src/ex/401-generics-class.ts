@@ -1,3 +1,26 @@
+// ========== 泛型的黃金法則 ============
+// 一個可以幫助判斷函數是否需要使用泛型參數型別的方法是，它應該至少使用兩次以上。(若有回傳值，則回傳型別也算)
+function logInput<T extends string>(input: T): void {
+  // T 只用了一次，所以不需要
+  console.log('Hi ', input);
+}
+// 可簡化為以下，不需要用到泛型
+function logInput2(input: string): void {
+  console.log('Hi ', input);
+}
+
+// ========== 泛型的命名約定 ============
+// 第一個引數會用 T 表示 Type，若有第二個引數，則用 U 表示，第三個引數用 V 表示，以此類推。
+// 若用在物件的鍵值，會用 K 表示 Key，用在物件的值，會用 V 表示。
+// 若用在狀態(State)的話，會用 S 表示 State。
+// E 代表 Element(元素)
+// R 代表 Return(回傳值)
+
+// 注意：以上這些只是約定俗成的命名，並不是強制規定，最好還是用可讀性較高的名稱！尤其是在較大的專案中。
+function labelBox<Label, Value>(label: Label, value: Value): void {
+  // 略...
+}
+
 // ========== class generics 泛型類別 ============
 // 類別實體也可以透過明確的引數型別來避免預設為 unknown，就像其它泛型函數呼叫一樣。
 
