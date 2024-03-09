@@ -5,8 +5,8 @@
     "noImplicitAny": true,
 
     "module": "ESNext",
-    "target": "ES6",
-
+    "target": "ES2020", // 設定編譯後的 JavaScript 版本，若設太低，也可能會有新的些語法無法被 TS 識別
+    "importHelpers": true, // 將一些常見的幫助函式從 tslib 中引入，以減少程式碼的大小。
     "jsx": "react",
     "allowJs": true,
     "checkJs": false,
