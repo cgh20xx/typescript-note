@@ -1,4 +1,9 @@
-// ========== 宣告 window 全域變數 ==========
+// ========== 宣告 全域變數 ==========
+// 注意：全域變數包含 window，但不限於 window。
+
+// 一般全域變數，不在 window 全域變數中
+declare const customVar: string;
+
 // 有 2 種方式可以擴充 window 全域變數：
 
 // 1. 擴充 window 全域變數，只能使用 window 關鍵字呼叫，不能直接呼叫。
@@ -7,6 +12,7 @@ interface Window {
 }
 
 // 注意：使用 declare global 也是可以的，但要是在模組系統中才可使用，否則會報錯。
+// 這隻 .d.ts 因不含 export，所以不是模組，所以不能使用 declare global。
 // declare global {
 //   interface Window {
 //     customDog: string;

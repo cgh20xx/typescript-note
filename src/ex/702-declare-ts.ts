@@ -1,4 +1,4 @@
-// ========== 宣告 JS 模組檔案型別 ==========
+// ========== 使用已宣告的 JS 模組變數 ==========
 
 import { isTooLongFromModule } from './702-declare-js';
 // isTooLongFromModule 這個 function 是從 JS 檔案中 import 進來的
