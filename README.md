@@ -43,6 +43,14 @@ Node.js 版本 v16 -> v20
 │   │   ├── 409-generics-type-default.ts
 │   │   ├── 410-generics-promise.ts
 │   │   ├── 501-object-union.ts
+│   │   ├── 701-declare-in-ts.ts
+│   │   ├── 702-declare-js.d.ts
+│   │   ├── 702-declare-js.js
+│   │   ├── 702-declare-ts.ts
+│   │   ├── 703-declare-global.ts
+│   │   ├── 703-declare-global1.d.ts
+│   │   ├── 704-declare-window.ts
+│   │   ├── 704-declare-window1.d.ts
 │   │   ├── 801-utility-types-partial.ts
 │   │   ├── 802-utility-types-required.ts
 │   │   ├── 803-utility-types-readonly.ts

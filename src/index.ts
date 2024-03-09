@@ -29,7 +29,9 @@
 // import './ex/409-generics-type-default';
 // import './ex/410-generics-promise';
 // import './ex/501-object-union';
-import './ex/702-declare-ts';
+// import './ex/702-declare-ts';
+// import './ex/703-declare-global';
+// import './ex/704-declare-window';
 // import './ex/801-utility-types-partial';
 // import './ex/802-utility-types-required';
 // import './ex/803-utility-types-readonly';
