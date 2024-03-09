@@ -8,7 +8,8 @@
     "target": "ES6",
 
     "jsx": "react",
-    "allowJs": false,
+    "allowJs": true,
+    "checkJs": false,
     "moduleResolution": "node",
     // "strictNullChecks": true, // 預設為 false，有設定 strict: true 就不用設定 strictNullChecks: true
     "strict": true,
