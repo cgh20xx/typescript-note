@@ -51,6 +51,7 @@ Node.js 版本 v16 -> v20
 │   │   ├── 703-declare-global1.d.ts
 │   │   ├── 704-declare-window.ts
 │   │   ├── 704-declare-window1.d.ts
+│   │   ├── 705-declare-module.ts
 │   │   ├── 801-utility-types-partial.ts
 │   │   ├── 802-utility-types-required.ts
 │   │   ├── 803-utility-types-readonly.ts
