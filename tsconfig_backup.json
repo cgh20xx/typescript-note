@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "noImplicitAny": true,
+
+    "module": "ESNext",
+    "target": "ES2020", // 設定編譯後的 JavaScript 版本，若設太低，也可能會有新的些語法無法被 TS 識別
+    "importHelpers": true, // 將一些常見的幫助函式從 tslib 中引入，以減少程式碼的大小。
+    "jsx": "react",
+    "allowJs": true,
+    "checkJs": false,
+    "moduleResolution": "node",
+    // "strictNullChecks": true, // 預設為 false，有設定 strict: true 就不用設定 strictNullChecks: true
+    "strict": true,
+    // 在 TypeScript 中，strict 選項是一個啟用所有嚴格型別檢查選項的集合。當你在 tsconfig.json 檔案中設定 "strict": true 時，以下的選項會被啟用：
+    // noImplicitAny: 當函式參數的型別是 any 且沒有明確指定型別時，會產生錯誤。
+    // noImplicitThis: 當 this 表達式的值為 any 且沒有明確指定型別時，會產生錯誤。
+    // alwaysStrict: 在程式碼中強制使用 JavaScript 的嚴格模式。
+    // strictBindCallApply: 在 bind、call 和 apply 方法上強制使用嚴格的型別檢查。
+    // strictNullChecks: 在型別檢查中，null 和 undefined 值不會被包含在任何型別中，除非明確使用 null 或 undefined 型別。
+    // strictFunctionTypes: 在函式型別的比較上強制使用嚴格的型別檢查。
+    // strictPropertyInitialization: 在類別的屬性初始化上強制使用嚴格的型別檢查。
+    // 這些選項可以幫助你避免許多常見的錯誤，並提高你的程式碼品質。因此，如果你的專案可以接受這些嚴格的型別檢查，那麼建議你啟用 strict 選項。
+
+    // 相容性處理 (針對 CommonJS)
+    "esModuleInterop": true, // 讓 ts 有能力 import CommonJS 模組
+    "allowSyntheticDefaultImports": true, // 通常配合讓 esModuleInterop: true 使用，讓 import CommonJS 不需使用 as 別名也能用
+
+    // 路徑處理
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["*"]
+    },
+    "moduleDetection": "force" // 強制視所有的 ts 皆為 module
+  }
+}
