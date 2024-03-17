@@ -48,3 +48,4 @@
 // import './ex/903-typeof';
 // import './ex/904-non-null-assertion';
 // import './ex/905-this-type';
+import './ex/906-resolve-json';

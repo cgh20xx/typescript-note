@@ -42,7 +42,7 @@
     // "resolvePackageJsonExports": true,                /* 解析導入時使用 package.json 的 'exports' 字段。 */
     // "resolvePackageJsonImports": true,                /* 解析導入時使用 package.json 的 'imports' 字段。 */
     // "customConditions": [],                           /* 解析導入時設置的條件，除了解析器特定的默認值。 */
-    // "resolveJsonModule": true,                        /* 啟用導入 .json 文件。 */
+    "resolveJsonModule": true,                        /* 啟用導入 .json 文件。 */
     // "allowArbitraryExtensions": true,                 /* 啟用導入具有任何擴展名的文件，前提是存在聲明文件。 */
     // "noResolve": true,                                /* 禁止 'import'、'require' 或 '<reference>' 擴展 TypeScript 應該添加到專案中的文件數量。 */
 

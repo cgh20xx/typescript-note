@@ -66,13 +66,17 @@ Node.js 版本 v16 -> v20
 │   │   ├── 902-declaration-files.ts
 │   │   ├── 903-typeof.ts
 │   │   ├── 904-non-null-assertion.ts
-│   │   └── 905-this-type.ts
+│   │   ├── 905-this-type.ts
+│   │   ├── 906-resolve-json-array.json
+│   │   ├── 906-resolve-json-obj.json
+│   │   └── 906-resolve-json.ts
 │   ├── index.ts
 │   └── template.html
 ├── README.md
 ├── package-lock.json
 ├── package.json
 ├── tsconfig.json
+├── tsconfig_backup.json
 └── webpack.config.js
 ```
 
