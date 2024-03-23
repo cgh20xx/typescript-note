@@ -11,8 +11,8 @@
     // "disableReferencedProjectLoad": true,             /* 減少 TypeScript 自動載入的專案數量。 */
 
     /* 語言和環境 */
-    "target": "ES2020",                                  /* 設定 JavaScript 語言版本以及包含相容的庫聲明。 */
-    // "lib": [],                                        /* 指定一組捆綁的庫聲明文件，描述目標運行時環境。 */
+    "target": "ES2020",                                  /* 設定輸出的 JavaScript 版本以及包含相容的 .d.ts。 */
+    // "lib": [],                                        /* 指定一組捆綁的 .d.ts 文件，描述目標運行時環境有哪些內建可用的 API。 */
     // "jsx": "preserve",                                /* 指定生成的 JSX 代碼。 */
     // "experimentalDecorators": true,                   /* 啟用對遺留實驗性裝飾器的實驗性支援。 */
     // "emitDecoratorMetadata": true,                    /* 在源文件中為裝飾的聲明生成設計類型元數據。 */
@@ -109,7 +109,7 @@
 
     /* Completeness */
     // "skipDefaultLibCheck": true,                      /* 跳過對隨 TypeScript 附帶的 .d.ts 檔案的類型檢查。 */
-    "skipLibCheck": true                                 /* 跳過對所有 .d.ts 檔案的類型檢查。 */
+    "skipLibCheck": true                                 /* 跳過對所有 .d.ts 檔案的類型檢查，可加速 TS 性能，大多數專案會開啟 */
 
   }
 }
