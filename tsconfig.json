@@ -55,12 +55,12 @@
     // "declaration": true,                              /* 會依據 outDir 的規則生成 .d.ts 和 .js 文件到相同的輸出目錄。 */
     // "declarationMap": true,                           /* 為 d.ts 文件創建原始碼映射，以方便除錯。 */
     // "emitDeclarationOnly": true,                      /* 只輸出 d.ts 文件，而不含 JavaScript 文件。 */
-    "sourceMap": true,                                   /* 為生成的 JavaScript 文件創建源映射文件。 */
-    // "inlineSourceMap": true,                          /* 在生成的 JavaScript 內部包含源映射文件。 */
+    "sourceMap": true,                                   /* 為生成的 JavaScript 文件創建原始碼映射文件。 */
+    // "inlineSourceMap": true,                          /* 在生成的 JavaScript 內部包含原始碼映射文件。 */
     // "outFile": "./",                                  /* 指定將所有輸出打包到一個 JavaScript 文件中。如果 'declaration' 為 true，還指定將所有 .d.ts 輸出打包到一個文件中。 */
     "outDir": "./dist/",                                 /* 指定所有輸出文件的輸出文件夾。 */
     // "removeComments": true,                           /* 禁用註釋的輸出。 */
-    // "noEmit": true,                                   /* 禁用編譯時的文件輸出。 */
+    // "noEmit": true,                                   /* 編譯時不會建立額外新的檔案，TS 只會回報它所發現的任何語法錯誤。 */
     // "importHelpers": true,                            /* 允許每個專案從 tslib 導入幫助函數，而不是每個文件都包含它們。 */
     // "importsNotUsedAsValues": "remove",               /* 指定僅用於類型的導入的輸出/檢查行為。 */
     // "downlevelIteration": true,                       /* 為迭代生成更符合標準但更冗長且性能較差的 JavaScript。 */
