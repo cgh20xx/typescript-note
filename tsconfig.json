@@ -6,7 +6,7 @@
     // "incremental": true,                              /* 儲存 .tsbuildinfo 檔案以便於專案的增量編譯。 */
     // "composite": true,                                /* 啟用限制，允許 TypeScript 專案與專案參考一起使用。 */
     // "tsBuildInfoFile": "./.tsbuildinfo",              /* 指定 .tsbuildinfo 增量編譯檔案的路徑。 */
-    // "disableSourceOfProjectReferenceRedirect": true,  /* 禁用對合成專案的引用時，優先選擇源文件而不是聲明文件。 */
+    // "disableSourceOfProjectReferenceRedirect": true,  /* 禁用對合成專案的引用時，優先選擇源文件而不是宣告文件。 */
     // "disableSolutionSearching": true,                 /* 編輯時，從多專案參考檢查中排除專案。 */
     // "disableReferencedProjectLoad": true,             /* 減少 TypeScript 自動載入的專案數量。 */
 
@@ -15,7 +15,7 @@
     // "lib": [],                                        /* 指定一組捆綁的 .d.ts 文件，描述目標運行時環境有哪些內建可用的 API。 */
     // "jsx": "preserve",                                /* 指定生成的 JSX 代碼。 */
     // "experimentalDecorators": true,                   /* 啟用對遺留實驗性裝飾器的實驗性支援。 */
-    // "emitDecoratorMetadata": true,                    /* 在源文件中為裝飾的聲明生成設計類型元數據。 */
+    // "emitDecoratorMetadata": true,                    /* 在源文件中為裝飾的宣告生成設計類型元數據。 */
     // "jsxFactory": "",                                 /* 指定在目標 React JSX 生成時使用的 JSX 工廠函數，例如 'React.createElement' 或 'h'。 */
     // "jsxFragmentFactory": "",                         /* 指定在目標 React JSX 生成時用於片段的 JSX 片段引用，例如 'React.Fragment' 或 'Fragment'。 */
     // "jsxImportSource": "",                            /* 指定在使用 'jsx: react-jsx*' 時，用於導入 JSX 工廠函數的模塊標識符。 */
@@ -43,7 +43,7 @@
     // "resolvePackageJsonImports": true,                /* 解析導入時使用 package.json 的 'imports' 字段。 */
     // "customConditions": [],                           /* 解析導入時設置的條件，除了解析器特定的默認值。 */
     "resolveJsonModule": true,                        /* 啟用導入 .json 文件。 */
-    // "allowArbitraryExtensions": true,                 /* 啟用導入具有任何擴展名的文件，前提是存在聲明文件。 */
+    // "allowArbitraryExtensions": true,                 /* 啟用導入具有任何擴展名的文件，前提是存在宣告文件。 */
     // "noResolve": true,                                /* 禁止 'import'、'require' 或 '<reference>' 擴展 TypeScript 應該添加到專案中的文件數量。 */
 
     /* JavaScript 支援 */
@@ -69,11 +69,11 @@
     // "inlineSources": true,                            /* 在生成的 JavaScript 中包含源代碼的內容。 */
     // "emitBOM": true,                                  /* 在輸出文件的開頭生成 UTF-8 字節順序標記 (BOM)。 */
     // "newLine": "crlf",                                /* 設定輸出文件的換行符。 */
-    // "stripInternal": true,                            /* 禁用在生成的代碼中有 '@internal' 的聲明。 */
+    // "stripInternal": true,                            /* 禁用在生成的代碼中有 '@internal' 的宣告。 */
     // "noEmitHelpers": true,                            /* 禁用在編譯輸出中生成自定義幫助函數，例如 '__extends'。 */
     // "noEmitOnError": true,                            /* 如果報告了任何類型檢查錯誤，則禁用輸出文件。 */
-    // "preserveConstEnums": true,                       /* 禁用在生成的代碼中擦除 'const enum' 聲明。 */
-    // "declarationDir": "./",                           /* 指定生成的聲明文件的輸出目錄。 */
+    // "preserveConstEnums": true,                       /* 禁用在生成的代碼中擦除 'const enum' 宣告。 */
+    // "declarationDir": "./",                           /* 指定生成的宣告文件的輸出目錄。 */
     // "preserveValueImports": true,                     /* 在 JavaScript 輸出中保留未使用的導入值，否則將被刪除。 */
 
     /* 互操作性限制 */
@@ -87,22 +87,22 @@
 
     /* Type Checking */
     "strict": true,                                      /* Enable all strict type-checking options. */
-    // "noImplicitAny": true,                               /* 啟用對表達式和聲明的隱含 'any' 類型的錯誤報告。 */
-    // "strictNullChecks": true,                            /* 在類型檢查時，考慮 'null' 和 'undefined'。 */
+    // "noImplicitAny": true,                               /* 啟用對表達式和宣告的隱含 'any' 類型的錯誤報告。 */
+    // "strictNullChecks": true,                            /* 啟用時，每種型別不能被指派為 'null' 和 'undefined'。 */
     // "strictFunctionTypes": true,                         /* 在分配函數時，檢查以確保參數和返回值是子類型兼容的。 */
     // "strictBindCallApply": true,                         /* 檢查 'bind'、'call' 和 'apply' 方法的參數是否與原始函數匹配。 */
-    // "strictPropertyInitialization": true,                /* 檢查在構造函數中聲明但未在構造函數中設置的類屬性。 */
+    // "strictPropertyInitialization": true,                /* 檢查在 constructor fn 中宣告但未在 constructor fn 中設置的 class 屬性。 */
     // "noImplicitThis": true,                              /* 當 'this' 被賦予 'any' 類型時，啟用錯誤報告。 */
-    // "useUnknownInCatchVariables": true,                  /* 將 catch 子句的變量默認為 'unknown' 而不是 'any'。 */
+    // "useUnknownInCatchVariables": true,                  /* 將 catch 子句的變數默認為 'unknown' 而不是 'any'。 */
     // "alwaysStrict": true,                                /* 確保總是發出 'use strict'。 */
-    // "noUnusedLocals": true,                              /* 當本地變量沒有被讀取時，啟用錯誤報告。 */
+    // "noUnusedLocals": true,                              /* 當本地變數沒有被讀取時，啟用錯誤報告。 */
     // "noUnusedParameters": true,                          /* 當函數的參數沒有被讀取時，提出錯誤。 */
     // "exactOptionalPropertyTypes": true,                  /* 按原樣解釋可選屬性類型，而不是添加 'undefined'。 */
     // "noImplicitReturns": true,                           /* 對不明確在函數中返回的代碼路徑啟用錯誤報告。 */
     // "noFallthroughCasesInSwitch": true,                  /* 對 switch 語句中的貫穿情況啟用錯誤報告。 */
     // "noUncheckedIndexedAccess": true,                    /* 當使用索引訪問時，給類型增加 'undefined'。 */
     // "noImplicitOverride": true,                          /* 確保在派生類中覆蓋的成員被標記有 override 修飾符。 */
-    // "noPropertyAccessFromIndexSignature": true,          /* 強制對使用索引簽名聲明的鍵使用索引訪問器。 */
+    // "noPropertyAccessFromIndexSignature": true,          /* 強制對使用索引簽名宣告的鍵使用索引訪問器。 */
     // "allowUnusedLabels": true,                           /* 禁用對未使用標籤的錯誤報告。 */
     // "allowUnreachableCode": true,                        /* 禁用對不可達代碼的錯誤報告。 */
 
