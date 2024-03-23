@@ -52,9 +52,9 @@
     // "maxNodeModuleJsDepth": 1,                        /* 指定從 'node_modules' 檢查 JavaScript 文件時使用的最大文件夾深度。僅適用於 'allowJs'。 */
 
     /* 輸出 */
-    // "declaration": true,                              /* 從 TypeScript 和 JavaScript 文件生成 .d.ts 文件。 */
-    // "declarationMap": true,                           /* 為 d.ts 文件創建源映射。 */
-    // "emitDeclarationOnly": true,                      /* 只輸出 d.ts 文件，而不是 JavaScript 文件。 */
+    // "declaration": true,                              /* 會依據 outDir 的規則生成 .d.ts 和 .js 文件到相同的輸出目錄。 */
+    // "declarationMap": true,                           /* 為 d.ts 文件創建原始碼映射，以方便除錯。 */
+    // "emitDeclarationOnly": true,                      /* 只輸出 d.ts 文件，而不含 JavaScript 文件。 */
     "sourceMap": true,                                   /* 為生成的 JavaScript 文件創建源映射文件。 */
     // "inlineSourceMap": true,                          /* 在生成的 JavaScript 內部包含源映射文件。 */
     // "outFile": "./",                                  /* 指定將所有輸出打包到一個 JavaScript 文件中。如果 'declaration' 為 true，還指定將所有 .d.ts 輸出打包到一個文件中。 */
