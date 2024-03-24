@@ -27,7 +27,7 @@
     /* 模組 */
     "module": "ESNext",                                  /* 指定生成的程式碼要用哪種模組系統。 */
     // "rootDir": "./",                                  /* 指定源文件的根文件夾。 */
-    "moduleResolution": "node",                          /* 指定 TypeScript 如何從給定的模組標識符查找文件。 */
+    "moduleResolution": "bundler",                       /* 指定模組解析策略，預設值會依據 module 設定有所不同 */
     // 路徑處理
     "baseUrl": "./src",                                  /* 指定解析非相對模組名稱的基目錄。 */
     "paths": {                                           /* 指定重新映射導入到其他查找位置的條目集合。 */
