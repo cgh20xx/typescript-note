@@ -18,26 +18,26 @@
     // "emitDecoratorMetadata": true,                    /* 在源文件中為裝飾的宣告生成設計類型元數據。 */
     // "jsxFactory": "",                                 /* 指定在目標 React JSX 生成時使用的 JSX 工廠函數，例如 'React.createElement' 或 'h'。 */
     // "jsxFragmentFactory": "",                         /* 指定在目標 React JSX 生成時用於片段的 JSX 片段引用，例如 'React.Fragment' 或 'Fragment'。 */
-    // "jsxImportSource": "",                            /* 指定在使用 'jsx: react-jsx*' 時，用於導入 JSX 工廠函數的模塊標識符。 */
+    // "jsxImportSource": "",                            /* 指定在使用 'jsx: react-jsx*' 時，用於導入 JSX 工廠函數的模組標識符。 */
     // "reactNamespace": "",                             /* 指定為 'createElement' 調用的對象。僅適用於目標為 'react' JSX 生成。 */
     // "noLib": true,                                    /* 禁用包括任何庫文件，包括默認的 lib.d.ts。 */
     // "useDefineForClassFields": true,                  /* 生成符合 ECMAScript 標準的類字段。 */
-    "moduleDetection": "force",                          /* 控制檢測模塊格式的方法。 */ // 強制視所有的 ts 皆為 module
+    "moduleDetection": "force",                          /* 控制檢測模組格式的方法。 */ // 強制視所有的 ts 皆為 module
 
-    /* 模塊 */
-    "module": "ESNext",                                  /* 指定生成的模塊代碼。 */
+    /* 模組 */
+    "module": "ESNext",                                  /* 指定生成的程式碼要用哪種模組系統。 */
     // "rootDir": "./",                                  /* 指定源文件的根文件夾。 */
-    "moduleResolution": "node",                          /* 指定 TypeScript 如何從給定的模塊標識符查找文件。 */
+    "moduleResolution": "node",                          /* 指定 TypeScript 如何從給定的模組標識符查找文件。 */
     // 路徑處理
-    "baseUrl": "./src",                                  /* 指定解析非相對模塊名稱的基目錄。 */
+    "baseUrl": "./src",                                  /* 指定解析非相對模組名稱的基目錄。 */
     "paths": {                                           /* 指定重新映射導入到其他查找位置的條目集合。 */
       "@/*": ["*"]
     },                          
-    // "rootDirs": [],                                   /* 允許將多個文件夾視為一個文件夾來解析模塊。 */
+    // "rootDirs": [],                                   /* 允許將多個文件夾視為一個文件夾來解析模組。 */
     // "typeRoots": [],                                  /* 指定像 './node_modules/@types' 一樣的多個文件夾。 */
     // "types": [],                                      /* 指定要包含但不在源文件中引用的類型包名。 */
-    // "allowUmdGlobalAccess": true,                     /* 允許從模塊訪問 UMD 全局對象。 */
-    // "moduleSuffixes": [],                             /* 解析模塊時要搜索的文件名後綴列表。 */
+    // "allowUmdGlobalAccess": true,                     /* 允許從模組訪問 UMD 全局對象。 */
+    // "moduleSuffixes": [],                             /* 解析模組時要搜索的文件名後綴列表。 */
     // "allowImportingTsExtensions": true,               /* 允許導入包含 TypeScript 文件擴展名的文件。需要設置 '--moduleResolution bundler' 以及 '--noEmit' 或 '--emitDeclarationOnly'。 */
     // "resolvePackageJsonExports": true,                /* 解析導入時使用 package.json 的 'exports' 字段。 */
     // "resolvePackageJsonImports": true,                /* 解析導入時使用 package.json 的 'imports' 字段。 */
@@ -80,8 +80,8 @@
     // "isolatedModules": true,                          /* 確保每個文件可以安全地編譯，而不依賴其他導入。 */
     // "verbatimModuleSyntax": true,                     /* 不轉換或省略任何未標記為僅類型的導入或導出，確保它們按照 'module' 設置的輸出文件格式編寫。 */
     // 相容性處理 (針對 CommonJS)
-    // "allowSyntheticDefaultImports": true,             /* 允許在模塊沒有默認導出時使用 'import x from y'。 */ // 通常配合讓 esModuleInterop: true 使用，讓 import CommonJS 不需使用 as 別名也能用
-    "esModuleInterop": true,                             /* 生成額外的 JavaScript 以便於支援導入 CommonJS 模塊。這啟用了 'allowSyntheticDefaultImports' 以實現類型兼容性。 */ // 讓 ts 有能力 import CommonJS 模組
+    // "allowSyntheticDefaultImports": true,             /* 允許在模組沒有默認導出時使用 'import x from y'。 */ // 通常配合讓 esModuleInterop: true 使用，讓 import CommonJS 不需使用 as 別名也能用
+    "esModuleInterop": true,                             /* 生成額外的 JavaScript 以便於支援導入 CommonJS 模組。這啟用了 'allowSyntheticDefaultImports' 以實現類型兼容性。 */ // 讓 ts 有能力 import CommonJS 模組
     // "preserveSymlinks": true,                         /* 禁用解析符號鏈接為其真實路徑。這與 node 中的相同標誌相關。 */ 
     "forceConsistentCasingInFileNames": true,            /* 確保導入時的大小寫正確。 */
 
