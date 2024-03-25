@@ -5,7 +5,7 @@
 
     /* 專案設定 */
     // "incremental": true,                              /* 儲存 .tsbuildinfo 檔案以便於專案的增量編譯。 */
-    // "composite": true,                                /* 啟用限制，允許 TypeScript 專案與專案參考一起使用。 */
+    // "composite": true,                                /* 啟用限制，允許 TypeScript 專案與專案參考(references)一起使用。 */
     // "tsBuildInfoFile": "./.tsbuildinfo",              /* 指定 .tsbuildinfo 增量編譯檔案的路徑。 */
     // "disableSourceOfProjectReferenceRedirect": true,  /* 禁用對合成專案的引用時，優先選擇源文件而不是宣告文件。 */
     // "disableSolutionSearching": true,                 /* 編輯時，從多專案參考檢查中排除專案。 */
@@ -111,6 +111,6 @@
     /* Completeness */
     // "skipDefaultLibCheck": true,                      /* 跳過對隨 TypeScript 附帶的 .d.ts 檔案的類型檢查。 */
     "skipLibCheck": true                                 /* 跳過對所有 .d.ts 檔案的類型檢查，可加速 TS 性能，大多數專案會開啟 */
-
-  }
+  },
+  // "references": [{ "path": "./core" }]                /* 這個選項用於設定 TypeScript 專案參考。允許將一個大型的專案分解成多個較小的專案，並且可以讓這些專案之間有明確的依賴關係。這將允許 TypeScript 編譯器在編譯這個專案時，也考慮到這些依賴的專案，通常與 composite 一起設定 */
 }
