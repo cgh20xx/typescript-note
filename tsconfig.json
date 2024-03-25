@@ -1,4 +1,5 @@
 {
+  "extends": "./tsconfig.base.json",                      /* 將配置選項從另一個 tsconfig 延伸過來 */
   "compilerOptions": {
     /* 訪問 https://aka.ms/tsconfig 以了解更多關於此檔案的資訊 */
 
@@ -86,7 +87,7 @@
     "forceConsistentCasingInFileNames": true,            /* 確保導入時的大小寫正確。 */
 
     /* Type Checking */
-    "strict": true,                                      /* Enable all strict type-checking options. */
+    // "strict": true,                                      /* Enable all strict type-checking options. */
     // "noImplicitAny": true,                               /* 啟用對表達式和宣告的隱含 'any' 類型的錯誤報告。 */
     // "strictNullChecks": true,                            /* 啟用時，每種型別不能被指派為 'null' 和 'undefined'。 */
     // "strictFunctionTypes": true,                         /* 在分配函數時，檢查以確保參數和返回值是子類型兼容的。 */
